@@ -1,0 +1,110 @@
+:root {
+  --base-color: #281e41;
+  --base-variant: #201637;
+  --text-color: #e6f0ff;
+  --text-variant: #d2dcf5;
+  --accent-color: #50b4d2;
+  --accent-variant: #aa3ead;
+}
+
+.lightmode {
+  --base-color: #d2dcf5;
+  --base-variant: #e6f0ff;
+  --text-color: #281e41;
+  --text-variant: #201637;
+  --accent-color: #aa3ead;
+  --accent-variant: #50b4d2;
+}
+
+#theme-switch {
+  display: inline;
+  margin-right: 200px;
+  height: 27px;
+  width: 27px;
+  border-radius: 20%;
+  border-color: var(--text-color);
+  background-color: var(--base-color);
+}
+
+#theme-switch svg {
+  fill: var(--text-color);
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.lightmode #theme-switch svg:first-child {
+  display: none;
+}
+
+.lightmode #theme-switch svg:last-child {
+  display: block;
+  fill: var(--text-color);
+}
+
+/* STYLE SECTIONINGS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--base-variant);
+}
+
+main {
+  margin: 0 200px;
+}
+
+.hero-section {
+  margin-top: 5em;
+}
+
+/* STYLE NAV BAR */
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  padding: 1.5em 0;
+  padding-top: 1.7em;
+  background-color: var(--base-color);
+  color: var(--text-color);
+  font-size: 1.2em;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin-left: 200px;
+}
+
+.nav-list li {
+  display: inline;
+  margin-right: 2em;
+  font-weight: 500;
+}
+
+.nav-list li:hover {
+  color: var(--accent-color);
+}
+
+/* STYLE TEXT */
+.hero-title {
+  font-family: "Baumans", system-ui;
+  color: var(--text-color);
+  font-size: 3.2em;
+  margin-bottom: 0.5em;
+}
+
+.hero-subtitle {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-variant);
+  font-size: 1.5em;
+}
+
+/* STYLE BUTTONS */
+
+/* STYLE IMAGES */
+
+/* STYLE FOOTER */
