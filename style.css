@@ -1,19 +1,19 @@
 :root {
-  --base-color: #281e41;
-  --base-variant: #201637;
+  --base-color: #1f1940;
+  --base-variant: #181331;
   --text-color: #e6f0ff;
   --text-variant: #d2dcf5;
-  --accent-color: #50b4d2;
-  --accent-variant: #aa3ead;
+  --accent-color: #1fc2d8;
+  --accent-variant: #d041b3;
 }
 
 .lightmode {
   --base-color: #d2dcf5;
   --base-variant: #e6f0ff;
-  --text-color: #281e41;
-  --text-variant: #201637;
-  --accent-color: #aa3ead;
-  --accent-variant: #50b4d2;
+  --text-color: #1f1940;
+  --text-variant: #181331;
+  --accent-color: #d041b3;
+  --accent-variant: #1fc2d8;
 }
 
 #theme-switch {
@@ -68,7 +68,7 @@ main {
   justify-content: space-between;
   font-family: "Montserrat", sans-serif;
   padding: 1.5em 0;
-  padding-top: 1.7em;
+  padding-top: 2em;
   background-color: var(--base-color);
   color: var(--text-color);
   font-size: 1.2em;
