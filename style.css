@@ -61,8 +61,13 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--base-variant);
+  font-family: "Montserrat", sans-serif;
 }
 
 main {
@@ -70,10 +75,22 @@ main {
 }
 
 .hero-section {
-  margin-top: 6em;
+  margin-top: 14em;
   display: flex;
   align-items: center;
   gap: 8em;
+}
+
+.about-section {
+  margin-top: 8em;
+}
+
+.projects-section {
+  margin-top: 8em;
+}
+
+.contact-section {
+  margin-top: 8em;
 }
 
 /* STYLE TEXT */
@@ -85,15 +102,60 @@ main {
 }
 
 .hero-subtitle {
-  font-family: "Montserrat", sans-serif;
   color: var(--text-variant);
+  font-size: 1.6em;
+}
+
+.section-title {
+  font-family: "Baumans", system-ui;
+  color: var(--text-color);
+  font-size: 2.4em;
+}
+
+.about-text {
   font-size: 1.5em;
+  color: var(--text-variant);
+}
+
+.about-text p:first-child {
+  margin: 1em 0;
+}
+
+#about-skills {
+  padding: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.progress-bar {
+  background: var(--base-color);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.progress {
+  height: 100%;
+  background: var(--accent-color);
+  width: 0;
+  transition: width 1.5s ease;
 }
 
 /* STYLE IMAGES */
 .hero-image {
-  max-width: 320px;
-  min-width: 180px;
+  max-width: 300px;
+  min-width: 240px;
   width: 100%;
   aspect-ratio: 1/1;
 }
@@ -107,15 +169,18 @@ main {
 
 /* STYLE NAV BAR */
 .nav-bar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  font-family: "Montserrat", sans-serif;
+  justify-content: center;
   padding: 1.5em 0;
   padding-top: 2em;
   background-color: var(--base-color);
-  color: var(--text-color);
   font-size: 1.2em;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .nav-list {
@@ -125,12 +190,21 @@ main {
 
 .nav-list li {
   display: inline;
-  margin-right: 2em;
+  margin-right: 3em;
   font-weight: 500;
 }
 
-.nav-list li:hover {
+.nav-list li:last-child {
+  margin-right: 6em;
+}
+
+.nav-list a:hover {
   color: var(--accent-color);
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 /* STYLE FOOTER */

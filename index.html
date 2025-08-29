@@ -12,15 +12,15 @@
     />
     <title>Portfolio Website</title>
   </head>
-  <body class="lightmode">
+  <body class="">
     <nav>
       <div class="nav-bar">
         <div class="nav-links">
           <ul class="nav-list">
-            <li><a>Home</a></li>
-            <li><a>About</a></li>
-            <li><a>Projects</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="#hero-section">Home</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#contact-section">Contact</a></li>
           </ul>
         </div>
         <div>
@@ -53,7 +53,7 @@
     </nav>
 
     <main>
-      <header>
+      <header id="hero-section">
         <div class="hero-section">
           <div class="hero-image"><img src="assets/logo.png" /></div>
           <div class="hero-text">
@@ -65,9 +65,64 @@
           </div>
         </div>
       </header>
+
+      <section id="about-section">
+        <div class="about-section">
+          <div class="section-title"><h1>About Me</h1></div>
+          <div class="about-text">
+            <p>
+              I enjoy turning ideas into interactive experiences. My goal is to
+              grow as a developer by building projects that challenge me and
+              eventually help others bring their ideas to life.
+            </p>
+            <p>
+              I'm currently learning HTML, CSS, and JavaScript while also
+              exploring Python for backend development, this is my progress so far:
+            </p>
+          </div>
+
+          <div id="about-skills">
+            <div class="skill">
+              <span>HTML</span>
+              <div class="progress-bar">
+                <div class="progress" data-progress="60"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <span>CSS</span>
+              <div class="progress-bar">
+                <div class="progress" data-progress="50"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <span>JavaScript</span>
+              <div class="progress-bar">
+                <div class="progress" data-progress="20"></div>
+              </div>
+            </div> 
+
+            <div class="skill">
+              <span>Python</span>
+              <div class="progress-bar">
+                <div class="progress" data-progress="40"></div>
+              </div>
+            </div> 
+        </div>
+      </section>
+
+      <section id="projects-section">
+        <div class="projects-section">
+          <div class="section-title"><h1>Projects</h1></div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer id="contact-section">
+      <div class="contact-section"></div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
