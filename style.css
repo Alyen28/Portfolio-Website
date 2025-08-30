@@ -24,18 +24,23 @@
   border-radius: 20%;
   border-color: var(--text-color);
   background-color: var(--base-color);
+  transition-duration: 0.2s;
 }
 
 #theme-switch:hover {
   border-color: var(--accent-color);
+  transition-duration: 0.2s;
+  cursor: pointer;
 }
 
 #theme-switch svg {
   fill: var(--text-color);
+  transition-duration: 0.2s;
 }
 
 #theme-switch svg:hover {
   fill: var(--accent-color);
+  transition-duration: 0.2s;
 }
 
 #theme-switch svg:last-child {
@@ -49,10 +54,12 @@
 .lightmode #theme-switch svg:last-child {
   display: block;
   fill: var(--text-color);
+  transition-duration: 0.2s;
 }
 
 .lightmode #theme-switch svg:last-child:hover {
   fill: var(--accent-color);
+  transition-duration: 0.2s;
 }
 
 /* STYLE SECTIONINGS */
@@ -75,18 +82,33 @@ main {
 }
 
 .hero-section {
-  padding-top: 14em;
+  padding-top: 14.4em;
   display: flex;
   align-items: center;
   gap: 8em;
 }
 
 .about-section {
-  padding-top: 9em;
+  padding-top: 10em;
+  margin-top: 3em;
 }
 
 .projects-section {
-  margin-top: 4em;
+  padding-top: 10em;
+  margin-top: 2.4em;
+}
+
+.project-cards {
+  display: flex;
+  margin-top: 2.4em;
+  gap: 3em;
+}
+
+.project-card {
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: var(--base-color);
+  border-radius: 10px;
 }
 
 .contact-section {
@@ -97,19 +119,19 @@ main {
 .hero-title {
   font-family: "Baumans", system-ui;
   color: var(--text-color);
-  font-size: 3.2em;
+  font-size: 3.6em;
   margin-bottom: 0.5em;
 }
 
 .hero-subtitle {
   color: var(--text-variant);
-  font-size: 1.6em;
+  font-size: 2em;
 }
 
 .section-title {
   font-family: "Baumans", system-ui;
   color: var(--text-color);
-  font-size: 2.2em;
+  font-size: 2em;
 }
 
 .about-text {
@@ -118,12 +140,12 @@ main {
 }
 
 .about-text p:first-child {
-  margin: 1em 0;
+  margin: 1.2em 0;
 }
 
 #about-skills {
-  padding: 50px;
-  max-width: 800px;
+  padding-top: 3.5em;
+  max-width: 1080px;
   margin: 0 auto;
   margin-top: 1em;
 }
@@ -152,9 +174,22 @@ main {
   transition: width 1.5s ease;
 }
 
+.project-card h2 {
+  font-family: "Baumans", system-ui;
+  color: var(--text-color);
+  margin-top: 20px;
+}
+
+.project-card p {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-variant);
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
 /* STYLE IMAGES */
 .hero-image {
-  max-width: 300px;
+  max-width: 320px;
   min-width: 240px;
   width: 100%;
   aspect-ratio: 1/1;
@@ -165,7 +200,15 @@ main {
   height: auto;
 }
 
+.project-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
 /* STYLE BUTTONS */
+.project-links button {
+  font-family: "Montserrat", sans-serif;
+}
 
 /* STYLE NAV BAR */
 .nav-bar {
@@ -180,7 +223,7 @@ main {
   padding-top: 2em;
   background-color: var(--base-color);
   font-size: 1.2em;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .nav-list {
@@ -200,11 +243,13 @@ main {
 
 .nav-list a:hover {
   color: var(--accent-color);
+  transition-duration: 0.2s;
 }
 
 .nav-list a {
   text-decoration: none;
   color: var(--text-color);
+  transition-duration: 0.2s;
 }
 
 /* STYLE FOOTER */
