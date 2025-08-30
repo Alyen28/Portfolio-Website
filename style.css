@@ -1,3 +1,4 @@
+/* THEME SWITCH */
 :root {
   --base-color: #1f1940;
   --base-variant: #181331;
@@ -98,21 +99,10 @@ main {
   margin-top: 2.4em;
 }
 
-.project-cards {
-  display: flex;
-  margin-top: 2.4em;
-  gap: 3em;
-}
-
-.project-card {
-  padding: 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  background-color: var(--base-color);
-  border-radius: 10px;
-}
-
 .contact-section {
   margin-top: 8em;
+  padding: 4em 200px;
+  background-color: var(--base-color);
 }
 
 /* STYLE TEXT */
@@ -174,7 +164,20 @@ main {
   transition: width 1.5s ease;
 }
 
-.project-card h2 {
+.project-cards {
+  display: flex;
+  margin-top: 2.4em;
+  gap: 3em;
+}
+
+.project-card {
+  padding: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: var(--base-color);
+  border-radius: 10px;
+}
+
+.project-card h3 {
   font-family: "Baumans", system-ui;
   color: var(--text-color);
   margin-top: 20px;
@@ -184,7 +187,7 @@ main {
   font-family: "Montserrat", sans-serif;
   color: var(--text-variant);
   margin-top: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 /* STYLE IMAGES */
@@ -203,11 +206,31 @@ main {
 .project-card img {
   width: 100%;
   border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* STYLE BUTTONS */
+.project-links {
+  display: flex;
+  gap: 0.8em;
+}
+
 .project-links button {
   font-family: "Montserrat", sans-serif;
+  padding: 0.8em;
+  border-radius: 5px;
+  background-color: var(--base-color);
+  border-color: var(--text-color);
+  color: var(--text-color);
+  font-weight: 600;
+  transition-duration: 0.4s;
+}
+
+.project-links button:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  cursor: pointer;
+  transition-duration: 0.4s;
 }
 
 /* STYLE NAV BAR */
@@ -253,3 +276,42 @@ main {
 }
 
 /* STYLE FOOTER */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 4em 14em;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact-form button {
+  font-family: "Montserrat", sans-serif;
+  padding: 0.8em;
+  border-radius: 5px;
+  background-color: var(--base-color);
+  border-color: var(--text-color);
+  color: var(--text-color);
+  font-weight: 600;
+  transition-duration: 0.4s;
+}
+
+.contact-form button:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  cursor: pointer;
+  transition-duration: 0.4s;
+}

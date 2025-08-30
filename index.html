@@ -66,7 +66,7 @@
 
       <section id="about-section">
         <div class="about-section">
-          <div class="section-title"><h1>About Me</h1></div>
+          <div class="section-title"><h2>About Me</h2></div>
           <div class="about-text">
             <p>
               I enjoy turning ideas into interactive experiences. My goal is to
@@ -112,25 +112,25 @@
 
       <section id="projects-section">
         <div class="projects-section">
-          <div class="section-title"><h1>Projects</h1></div>
+          <div class="section-title"><h2>Projects</h2></div>
           <div class="project-cards">
             <div class="project-card">
               <img src="assets/street-paws.png">
-              <h2>Street Paws</h2>
+              <h3>Street Paws</h3>
               <p>Website to raise awareness about animal welfare</p>
               <div class="project-links">
-                <button>Live Demo</button>
-                <button>Code <></button>
+                <div><button>Live Demo</button></div>
+                <div><button>Code <></button></div>
               </div>
             </div>
 
             <div class="project-card">
               <img src="assets/the-recipe-journal.png">
-              <h2>The Recipe Journal</h2>
+              <h3>The Recipe Journal</h3>
               <p>Front-end project simulating a recipe website</p>
               <div class="project-links">
-                <button>Live Demo</button>
-                <button>Code <></button>
+                <div><button>Live Demo</button></div>
+                <div><button>Code <></button></div>
               </div>
             </div>
           </div>
@@ -139,7 +139,31 @@
     </main>
 
     <footer id="contact-section">
-      <div class="contact-section"></div>
+      <div class="contact-section">
+
+        <div class="section-title" style="text-align: center;"><h2>Contact Me</h2></div>
+        <div class="contact-container">
+          <div class="contact-form">
+            <form action="https://formsubmit.co/alyen28.dev@gmail.com" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" placeholder="Your Message" required></textarea>
+              <button type="submit">Sumbit</button>
+            </form>
+          </div>
+          <div class="contact-links">
+            <a href="https://github.com/Alyen28" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/alyne-feitosa" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://t.me/YOURUSERNAME" target="_blank">
+              <i class="fab fa-telegram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>
