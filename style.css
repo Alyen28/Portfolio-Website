@@ -89,7 +89,7 @@ main {
   padding-top: 14.4em;
   display: flex;
   align-items: center;
-  gap: 8em;
+  gap: 10%;
 }
 
 .about-section {
@@ -120,23 +120,23 @@ main {
 .hero-title {
   font-family: "Baumans", system-ui;
   color: var(--text-color);
-  font-size: clamp(2.4em, 4vw, 4em);
+  font-size: clamp(2.2em, 4vw, 3.6em);
   margin-bottom: 0.5em;
 }
 
 .hero-subtitle {
   color: var(--text-variant);
-  font-size: clamp(1.2em, 2.2vw, 2.2em);
+  font-size: clamp(1.1em, 2.2vw, 2.2em);
 }
 
 .section-title {
   font-family: "Baumans", system-ui;
   color: var(--text-color);
-  font-size: clamp(1.6em, 2.4vw, 2.4em);
+  font-size: clamp(1.4em, 2.4vw, 2.2em);
 }
 
 .about-text {
-  font-size: clamp(1em, 1.8vw, 1.6em);
+  font-size: clamp(0.9em, 1.8vw, 1.5em);
   color: var(--text-variant);
 }
 
@@ -384,17 +384,17 @@ textarea::placeholder {
   main {
     margin: 0 140px;
   }
+
   .nav-list {
     margin-left: 140px;
   }
+
   #theme-switch {
     margin-right: 140px;
   }
+
   .hero-section {
     padding-top: 13.6em;
-    display: flex;
-    align-items: center;
-    gap: 8em;
   }
 
   .about-section {
@@ -411,22 +411,25 @@ textarea::placeholder {
   main {
     margin: 0 100px;
   }
+
   .nav-list {
     margin-left: 100px;
   }
+
   #theme-switch {
     margin-right: 100px;
   }
+
   .hero-section {
     padding-top: 12em;
-    display: flex;
-    align-items: center;
-    gap: 4em;
+  }
+
+  .hero-image {
+    min-width: 220px;
   }
 
   .about-section {
     padding-top: 7em;
-    margin-top: 0;
   }
 
   .projects-section {
@@ -447,33 +450,25 @@ textarea::placeholder {
   main {
     margin: 0 60px;
   }
+
   .nav-list {
     margin-left: 60px;
   }
+
   #theme-switch {
     margin-right: 60px;
   }
+
   .hero-section {
     padding-top: 11em;
-    display: flex;
-    align-items: center;
-    gap: 4em;
   }
 
-  .about-section {
-    padding-top: 7em;
-    margin-top: 0;
-  }
-
-  .projects-section {
-    padding-top: 7em;
+  .hero-image {
+    min-width: 180px;
   }
 
   .project-cards {
-    display: flex;
     flex-wrap: wrap;
-    margin-top: 2.4em;
-    gap: 3em;
   }
 
   .project-card {
@@ -483,36 +478,82 @@ textarea::placeholder {
   .contact-section {
     padding-left: 60px;
     padding-right: 60px;
+    padding-top: 3.5em;
+    padding-bottom: 0.1em;
   }
 }
 
-/* @media (max-width: 765px) {
-  main {
-    margin: 0 60px;
+@media (max-width: 742px) {
+  .nav-bar {
+    padding: 1.6em 0;
+    padding-top: 2em;
+    font-size: 1.1em;
   }
-  .nav-list {
-    margin-left: 60px;
+
+  .nav-list li {
+    margin-right: 2em;
   }
+
+  .nav-list li:last-child {
+    margin-right: 3em;
+  }
+
   #theme-switch {
-    margin-right: 60px;
+    height: 21px;
+    width: 21px;
   }
+
+  #theme-switch svg {
+    width: 98%;
+    height: auto;
+  }
+
   .hero-section {
-    padding-top: 11em;
-    display: flex;
-    align-items: center;
-    gap: 6em;
+    padding-top: 10em;
+    gap: 8%;
   }
 
-  .about-section {
-    padding-top: 7em;
-    margin-top: 0;
+  #contact-section {
+    padding-top: 1px;
+    margin-top: 0.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 0 30px;
   }
 
-  .projects-section {
-    padding-top: 7em;
+  .nav-list {
+    margin-left: 30px;
   }
+
+  #theme-switch {
+    margin-right: 30px;
+  }
+
+  .nav-bar {
+    font-size: 1em;
+  }
+
+  .nav-list li {
+    margin-right: 1.5em;
+  }
+
+  .nav-list li:last-child {
+    margin-right: 2em;
+  }
+
+  .hero-section {
+    flex-wrap: nowrap;
+  }
+
+  .hero-image {
+    min-width: 160px;
+  }
+
   .contact-section {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 54px;
+    padding-right: 54px;
   }
-} */
+}
