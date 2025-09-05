@@ -46,10 +46,7 @@
   transform: scale(1.02);
 }
 
-#theme-switch svg:last-child {
-  display: none;
-}
-
+#theme-switch svg:last-child,
 .lightmode #theme-switch svg:first-child {
   display: none;
 }
@@ -117,8 +114,12 @@ main {
 }
 
 /* STYLE TEXT */
-.hero-title {
+h1,
+h2,
+h3 {
   font-family: "Baumans", system-ui;
+}
+.hero-title {
   color: var(--text-color);
   font-size: clamp(2.2em, 4vw, 3.6em);
   margin-bottom: 0.5em;
@@ -130,7 +131,6 @@ main {
 }
 
 .section-title {
-  font-family: "Baumans", system-ui;
   color: var(--text-color);
   font-size: clamp(1.4em, 2.4vw, 2.2em);
 }
@@ -147,7 +147,6 @@ main {
 #about-skills {
   padding-top: 3.5em;
   max-width: 1080px;
-  margin: 0 auto;
   margin-top: 1em;
 }
 
@@ -182,20 +181,18 @@ main {
 }
 
 .project-card {
-  padding: 28px;
+  padding: 24px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   background-color: var(--base-color);
   border-radius: 10px;
 }
 
 .project-card h3 {
-  font-family: "Baumans", system-ui;
   color: var(--text-color);
   margin-top: 20px;
 }
 
 .project-card p {
-  font-family: "Montserrat", sans-serif;
   color: var(--text-variant);
   margin-top: 8px;
   margin-bottom: 24px;
@@ -216,7 +213,7 @@ main {
 
 .project-card img {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -252,7 +249,6 @@ main {
   z-index: 1000;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   padding: 1.5em 0;
   padding-top: 2em;
@@ -269,7 +265,7 @@ main {
 .nav-list li {
   display: inline;
   margin-right: 3em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .nav-list li:last-child {
@@ -304,7 +300,6 @@ main {
 
 .contact-form h3 {
   font-size: 1.4em;
-  font-family: "Baumans", system-ui;
   text-align: left;
   align-items: left;
   color: var(--text-color);
@@ -436,10 +431,6 @@ textarea::placeholder {
     padding-top: 7em;
   }
 
-  .project-card {
-    padding: 24px;
-  }
-
   .contact-section {
     padding-left: 100px;
     padding-right: 100px;
@@ -469,10 +460,6 @@ textarea::placeholder {
 
   .project-cards {
     flex-wrap: wrap;
-  }
-
-  .project-card {
-    padding: 28px;
   }
 
   .contact-section {
@@ -542,10 +529,6 @@ textarea::placeholder {
 
   .nav-list li:last-child {
     margin-right: 2em;
-  }
-
-  .hero-section {
-    flex-wrap: nowrap;
   }
 
   .hero-image {
