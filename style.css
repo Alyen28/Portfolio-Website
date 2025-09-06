@@ -549,10 +549,11 @@ textarea::placeholder {
 
   .nav-list li {
     margin-right: 1.2em;
+    font-weight: 600;
   }
 
   .nav-list li:last-child {
-    margin-right: 1.5em;
+    margin-right: 1.6em;
   }
 
   .hero-section {
