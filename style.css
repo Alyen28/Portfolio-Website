@@ -266,7 +266,7 @@ h3 {
 .nav-list li {
   display: inline;
   margin-right: 3em;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .nav-list li:last-child {
@@ -552,7 +552,7 @@ textarea::placeholder {
   }
 
   .nav-list li:last-child {
-    margin-right: 2em;
+    margin-right: 1.5em;
   }
 
   .hero-section {
