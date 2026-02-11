@@ -1,30 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A portfolio website divided in 4 main sections: Home, About, Projects and Contact.">
+    <meta
+      name="description"
+      content="A portfolio website divided in 4 main sections: Home, About, Projects and Contact."
+    />
 
-    <link rel="preload" as="font" type="font/woff2" href="fonts/baumans-v17-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-v31-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-v31-latin-500.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-v31-latin-600.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-v31-latin-100.woff2" crossorigin>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link href="style.css" rel="stylesheet" type="text/css" />
 
     <title>Portfolio Website</title>
   </head>
-  <body class="">
+  <body>
+    <nav>
       <div class="nav-bar" data-aos="fade" data-aos-delay="100">
         <div class="nav-links">
           <ul class="nav-list">
             <li><a href="#hero-section">Home</a></li>
             <li><a href="#about-section">About</a></li>
+            <li><a href="#skills-section">Skills</a></li>
             <li><a href="#projects-section">Projects</a></li>
             <li><a href="#contact-section">Contact</a></li>
           </ul>
@@ -56,64 +64,49 @@
           </button>
         </div>
       </div>
+    </nav>
 
     <main>
       <header id="hero-section">
         <div class="hero-section" data-aos="fade" data-aos-delay="100">
-          <div class="hero-image"><img src="assets/logo.webp" loading="lazy" alt="a cyan alien's head with a pink star on the left and a pink waning moon on the right"/></div>
+          <div class="hero-image">
+            <img
+              src="assets/new-logo.webp"
+              loading="lazy"
+              alt="a cyan alien's head with a pink star on the left and a pink waning moon on the right"
+            />
+          </div>
           <div class="hero-text">
             <h1 class="hero-title">Hi, I'm Alyne!</h1>
             <p class="hero-subtitle">
-              I'm an aspiring software engineer, passionate about technology, design
-              and worlds - real and imaginary. Welcome to my digital galaxy.
+              Front-end developer focused on building clean, accessible, and
+              user-centered web experiences.
             </p>
           </div>
         </div>
       </header>
 
       <section id="about-section">
-        <div class="about-section" data-aos="fade-up" data-aos-offset="160" data-aos-delay="100">
+        <div
+          class="about-section"
+          data-aos="fade-up"
+          data-aos-offset="160"
+          data-aos-delay="100"
+        >
           <div class="section-title"><h2>About Me</h2></div>
           <div class="about-text">
             <p>
-              I enjoy turning ideas into interactive experiences. My goal is to
-              grow as a developer by building projects that challenge me and
-              eventually help others bring their ideas to life.
+              I enjoy programming because it allows me to create, experiment,
+              and solve problems in a tangible way. Turning concepts into
+              working projects is what motivates me to keep learning and
+              improving.
             </p>
             <p>
-              I'm currently learning HTML, CSS, and JavaScript while also
-              exploring Python for backend development, this is my progress so far:
+              My current goal is to grow continuously as a developer by
+              challenging myself and collaborating with others to help transform
+              ideas into practical solutions!
             </p>
           </div>
-
-          <div id="about-skills">
-            <div class="skill">
-              <span>HTML</span>
-              <div class="progress-bar">
-                <div class="progress" data-progress="60"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <span>CSS</span>
-              <div class="progress-bar">
-                <div class="progress" data-progress="50"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <span>JavaScript</span>
-              <div class="progress-bar">
-                <div class="progress" data-progress="20"></div>
-              </div>
-            </div> 
-
-            <div class="skill">
-              <span>Python</span>
-              <div class="progress-bar">
-                <div class="progress" data-progress="40"></div>
-              </div>
-            </div> 
         </div>
       </section>
 
@@ -122,22 +115,54 @@
           <div class="section-title"><h2>Projects</h2></div>
           <div class="project-cards">
             <div class="project-card">
-              <img src="assets/street-paws.webp" loading="lazy" alt="a header of a website about animal welfare, with two puppies laying on the street on the background">
+              <img
+                src="assets/street-paws.webp"
+                loading="lazy"
+                alt="a header of a website about animal welfare, with two puppies laying on the street on the background"
+              />
               <h3>Street Paws</h3>
               <p>Website to raise awareness about animal welfare</p>
               <div class="project-links">
-                <div><a href="https://alyen28.github.io/Street-Paws/"><button aria-label="live demo of Street Paws">Live Demo</button></a></div>
-                <div><a href="https://github.com/Alyen28/Street-Paws.git"><button aria-label="view Street Paws' code">Code <></button></a></div>
+                <div>
+                  <a href="https://alyen28.github.io/Street-Paws/"
+                    ><button aria-label="live demo of Street Paws">
+                      Live Demo
+                    </button></a
+                  >
+                </div>
+                <div>
+                  <a href="https://github.com/Alyen28/Street-Paws.git"
+                    ><button aria-label="view Street Paws' code">
+                      Code <>
+                    </button></a
+                  >
+                </div>
               </div>
             </div>
 
             <div class="project-card">
-              <img src="assets/the-recipe-journal.webp" loading="lazy" alt="a header of a recipes website, with the photo of a big buffet on the background">
+              <img
+                src="assets/the-recipe-journal.webp"
+                loading="lazy"
+                alt="a header of a recipes website, with the photo of a big buffet on the background"
+              />
               <h3>The Recipe Journal</h3>
               <p>Front-end project simulating a recipe website</p>
               <div class="project-links">
-                <div><a href="https://alyen28.github.io/The-Recipe-Journal/"><button aria-label="live demo of The Recipe Journal">Live Demo</button></a></div>
-                <div><a href="https://github.com/Alyen28/The-Recipe-Journal.git"><button aria-label="view The Recipe Journal's code">Code <></button></a></div>
+                <div>
+                  <a href="https://alyen28.github.io/The-Recipe-Journal/"
+                    ><button aria-label="live demo of The Recipe Journal">
+                      Live Demo
+                    </button></a
+                  >
+                </div>
+                <div>
+                  <a href="https://github.com/Alyen28/The-Recipe-Journal.git"
+                    ><button aria-label="view The Recipe Journal's code">
+                      Code <>
+                    </button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -147,30 +172,67 @@
 
     <footer id="contact-section">
       <div class="contact-section">
-
-        <div class="section-title" style="text-align: center;" data-aos="fade-up" data-aos-delay="100"><h2>Contact Me</h2></div>
+        <div
+          class="section-title"
+          style="text-align: center"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <h2>Contact Me</h2>
+        </div>
         <div class="contact-container">
           <div class="contact-form" data-aos="fade-up" data-aos-delay="100">
-            <form action="https://formsubmit.co/alyen28.dev@gmail.com" method="POST">
-              <input type="text" name="name" placeholder="Enter your name" required>
-              <input type="email" name="email" placeholder="Enter your best e-mail" required>
-              <textarea name="message" placeholder="Enter your message" required></textarea>
+            <form
+              action="https://formsubmit.co/alyen28.dev@gmail.com"
+              method="POST"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your best e-mail"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Enter your message"
+                required
+              ></textarea>
               <button type="submit">Submit</button>
             </form>
           </div>
           <div>
             <div class="contact-links">
-              <a href="https://github.com/Alyen28" target="_blank" aria-label="link to my GitHub contact">
+              <a
+                href="https://github.com/Alyen28"
+                target="_blank"
+                aria-label="link to my GitHub contact"
+              >
                 <i class="fab fa-github"></i>
               </a>
-              <a href="https://linkedin.com/in/alyne-feitosa" target="_blank" aria-label="link to my LinkedIn contact">
+              <a
+                href="https://linkedin.com/in/alyne-feitosa"
+                target="_blank"
+                aria-label="link to my LinkedIn contact"
+              >
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="https://t.me/alyen28" target="_blank" aria-label="link to my Telegram contact">
+              <a
+                href="https://t.me/alyen28"
+                target="_blank"
+                aria-label="link to my Telegram contact"
+              >
                 <i class="fab fa-telegram"></i>
               </a>
             </div>
-            <div class="copy"><p>&copy; 2025 Alyne | All rights reserved</p></div>
+            <div class="copy">
+              <p>&copy; 2025 | Alyne Feitosa</p>
+            </div>
           </div>
         </div>
       </div>
@@ -178,8 +240,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
-        duration: 2000, 
-        once: true,     
+        duration: 2000,
+        once: true,
       });
     </script>
     <script src="script.js"></script>
