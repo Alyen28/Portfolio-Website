@@ -1,4 +1,9 @@
-// Lightmode / Theme Switch
+// Hamburger Menu
+import { lang } from "./lang.js";
+
+console.log(lang);
+
+// Theme Switch
 let lightmode = localStorage.getItem("lightmode");
 const themeSwitch = document.getElementById("theme-switch");
 
@@ -23,21 +28,18 @@ themeSwitch.addEventListener("click", () => {
   }
 });
 
-// Progress Bar
-const progressBars = document.querySelectorAll(".progress");
+// Scroll Progress Bar
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const target = entry.target;
-        const finalWidth = target.getAttribute("data-progress") + "%";
-        target.style.width = finalWidth;
-        observer.unobserve(target); // animate only once
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
+  const documentHeight = document.documentElement.scrollHeight;
 
-progressBars.forEach((bar) => observer.observe(bar));
+  const windowHeight = window.innerHeight;
+
+  const scrollableHeight = documentHeight - windowHeight;
+
+  const scrollPercentage = (scrollTop / scrollableHeight) * 100;
+
+  document.querySelector(".scroll-progress").style.width =
+    scrollPercentage + "%";
+});

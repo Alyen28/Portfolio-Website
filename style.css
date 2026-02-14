@@ -9,8 +9,8 @@
 }
 
 .lightmode {
-  --base-color: 205, 200, 235;
-  --base-variant: 235, 235, 255;
+  --base-variant: 225, 225, 245;
+  --base-color: 245, 245, 255;
   --text-color: 35, 25, 70;
   --text-variant: 15, 10, 40;
   --accent-color: 200, 70, 205;
@@ -98,15 +98,15 @@ body {
 }
 
 .about-section {
-  padding: 8em 10em 6em 10em;
+  padding: 8em 10em;
 }
 
 .skills-section {
-  padding: 6em 10em;
+  padding: 8em 10em;
 }
 
 .projects-section {
-  padding: 6em 10em;
+  padding: 8em 10em;
 }
 
 /* STYLE TEXT */
@@ -157,8 +157,8 @@ h3 {
   color: rgb(var(--text-color));
 }
 
-.skills-heading:first-child {
-  margin-top: 2em;
+.skills-heading {
+  margin-top: 1.4em;
 }
 
 .skills-list {
@@ -192,11 +192,13 @@ h3 {
 .soft-skill:hover {
   transform: translateY(-5px);
   border-color: rgb(var(--accent-variant));
+  box-shadow: 0 0 6px rgb(var(--accent-variant));
 }
 
 .hard-skill:hover {
   transform: translateY(-5px);
   border-color: rgb(var(--accent-color));
+  box-shadow: 0 0 6px rgb(var(--accent-color));
 }
 
 .hard-skill span,
@@ -224,6 +226,7 @@ h3 {
 .project-card:hover {
   transform: translateY(-5px);
   border-color: rgb(var(--text-variant));
+  box-shadow: 4px 6px 4px rgba(var(--text-variant), 0.2);
 }
 
 .project-card h3 {
@@ -264,10 +267,10 @@ h3 {
 /* STYLE BUTTONS */
 .hero-text button {
   font-family: "Montserrat", sans-serif;
-  padding: 0.8em;
-  border-radius: 8px;
+  padding: 0.6em 1em;
+  border-radius: 6px;
   background-color: rgb(var(--base-variant));
-  border-color: rgb(var(--base-color));
+  border-color: rgb(var(--text-variant));
   color: rgb(var(--text-variant));
   font-weight: 500;
   font-size: clamp(0.8em, 2vw, 1.4em);
@@ -279,6 +282,7 @@ h3 {
   color: rgb(var(--accent-color));
   cursor: pointer;
   transform: scale(1.02);
+  box-shadow: 0 0 6px rgb(var(--accent-color));
 }
 
 .project-links {
@@ -303,6 +307,7 @@ h3 {
   cursor: pointer;
   transform: scale(1.02);
   transition-duration: 0.4s;
+  box-shadow: 0 0 6px rgb(var(--accent-color));
 }
 
 .view-code:hover {
@@ -311,21 +316,21 @@ h3 {
   cursor: pointer;
   transform: scale(1.02);
   transition-duration: 0.4s;
+  box-shadow: 0 0 6px rgb(var(--accent-variant));
 }
 
 .contact-form button {
   font-family: "Montserrat", sans-serif;
-  padding: 0.6em;
-  border-radius: 8px;
+  padding: 0.6em 1em;
+  border-radius: 6px;
   background-color: rgb(var(--base-variant));
   border-color: rgb(var(--text-color));
   color: rgb(var(--text-color));
-  font-size: clamp(0.8em, 2vw, 1.2em);
+  font-size: 1.1em;
   font-weight: 500;
   max-width: 120px;
   transition-duration: 0.4s;
-  margin-left: 420px;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 }
 
 .contact-form button:hover {
@@ -334,6 +339,7 @@ h3 {
   color: rgb(var(--accent-color));
   cursor: pointer;
   transition-duration: 0.4s ease;
+  box-shadow: 0 0 6px rgb(var(--accent-color));
 }
 
 /* STYLE NAV BAR */
@@ -350,6 +356,20 @@ h3 {
   background-color: rgba(var(--base-variant), 0.9);
   backdrop-filter: blur(10px);
   border-bottom: 2px solid rgb(var(--base-color));
+}
+
+.scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(
+    90deg,
+    rgb(var(--accent-color)),
+    rgb(var(--accent-variant))
+  );
+  transition: width 0.1s linear;
 }
 
 .nav-list {
@@ -389,12 +409,9 @@ h3 {
 }
 
 /* STYLE FOOTER */
-#contact-section {
-  padding-top: 1px;
-}
 
 .contact-section {
-  padding: 6em 10em;
+  padding: 4em 8em 1em 8em;
   background-color: rgb(var(--base-variant));
   border-top: 2px solid rgb(var(--base-color));
 }
@@ -410,7 +427,7 @@ h3 {
 .contact-form form {
   display: flex;
   flex-direction: column;
-  gap: 1.2em;
+  gap: 1em;
   margin-top: 2em;
 }
 
@@ -419,38 +436,54 @@ h3 {
   padding: 0.8em;
   border: none;
   border-radius: 6px;
-  font-size: 1em;
+  font-size: clamp(0.8em, 1vw, 1.2em);
   font-family: "Montserrat", sans-serif;
   background-color: rgb(var(--base-color));
   color: rgb(var(--text-variant));
-  max-width: 540px;
+  max-width: 600px;
+  width: clamp(10em, 38vw, 40em);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: rgb(var(--text-variant));
+  color: rgb(var(--accent-color));
 }
 
 .contact-form textarea {
-  margin-bottom: 1em;
   height: 100px;
 }
 
 .contact-links {
-  font-size: 3em;
   display: flex;
+  flex-direction: column;
   justify-content: left;
-  gap: 0.6em;
-  margin-bottom: 0.4em;
+  gap: 4em;
+  margin-top: 2em;
 }
 
-.contact-links a {
+.contact-text {
+  color: rgb(var(--text-variant));
+  font-size: clamp(1.4em, 2.1vw, 2em);
+}
+
+.contact-icons a {
   text-decoration: none;
+  outline: none;
+}
+
+.contact-icons a:visited {
+  color: inherit;
+}
+
+.contact-icons a svg {
+  width: clamp(2.2em, 2.6vw, 2.8em);
+  height: auto;
   color: rgb(var(--text-color));
   transition-duration: 0.4s;
+  margin-right: 1em;
 }
 
-.contact-links a:hover {
+.contact-icons a svg:hover {
   color: rgb(var(--accent-color));
   transition-duration: 0.4s;
   transform: scale(1.1);
@@ -458,10 +491,8 @@ textarea::placeholder {
 
 .copy {
   color: rgb(var(--text-variant));
-  /* divider between copy and the rest of the footer */
-  border-top: 2px solid rgba(255, 255, 255, 0.06);
-  padding-top: 0.75em;
-  margin-top: 0.5em;
+  border-top: 2px solid rgb(var(--base-color));
+  padding: 2em 8em;
 }
 
 /* MEDIA QUERIES */
