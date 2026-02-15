@@ -30,11 +30,21 @@
       <div class="nav-bar" data-aos="fade" data-aos-delay="100">
         <div class="nav-links">
           <ul class="nav-list">
-            <li><a href="#hero-section">Home</a></li>
-            <li><a href="#about-section">About</a></li>
-            <li><a href="#skills-section">Skills</a></li>
-            <li><a href="#projects-section">Projects</a></li>
-            <li><a href="#contact-section">Contact</a></li>
+            <li><a href="#hero-section" data-translate="navHome">Home</a></li>
+            <li>
+              <a href="#about-section" data-translate="navAbout">About</a>
+            </li>
+            <li>
+              <a href="#skills-section" data-translate="navSkills">Skills</a>
+            </li>
+            <li>
+              <a href="#projects-section" data-translate="navProjects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="#contact-section" data-translate="navContact">Contact</a>
+            </li>
           </ul>
         </div>
         <div>
@@ -80,12 +90,16 @@
             />
           </div>
           <div class="hero-text">
-            <h1 class="hero-title">Hi, I'm Alyne!</h1>
-            <p class="hero-subtitle">
+            <h1 class="hero-title" data-translate="heroTitle">
+              Hi! I'm Alyne.
+            </h1>
+            <p class="hero-subtitle" data-translate="heroSubtitle">
               Front-end developer focused on building clean, accessible, and
               user-centered web experiences.
             </p>
-            <a href="#projects-section"><button>View Projects</button></a>
+            <a href="#projects-section"
+              ><button data-translate="heroButton">View Projects</button></a
+            >
           </div>
         </div>
       </header>
@@ -97,18 +111,20 @@
           data-aos-offset="160"
           data-aos-delay="100"
         >
-          <div class="section-title"><h2>About Me</h2></div>
+          <div class="section-title">
+            <h2 data-translate="aboutTitle">About Me</h2>
+          </div>
           <div class="about-text">
-            <p>
+            <p data-translate="aboutText1">
               I enjoy programming because it allows me to create, experiment,
               and solve problems in a tangible way. Turning concepts into
               working projects is what motivates me to keep learning and
               improving.
             </p>
-            <p>
+            <p data-translate="aboutText2">
               My current goal is to grow continuously as a developer by
               challenging myself and collaborating with others to help bring
-              their ideas to life!
+              their ideas to life.
             </p>
           </div>
         </div>
@@ -121,10 +137,14 @@
           data-aos-offset="160"
           data-aos-delay="100"
         >
-          <div class="section-title"><h2>Core Skills</h2></div>
+          <div class="section-title">
+            <h2 data-translate="skillsTitle">Core Skills</h2>
+          </div>
 
           <div class="skills-block">
-            <h3 class="skills-heading">Code & Tools</h3>
+            <h3 class="skills-heading" data-translate="skillsSubtitle1">
+              Code & Tools
+            </h3>
             <div class="skills-list">
               <div class="hard-skill">
                 <svg
@@ -263,30 +283,32 @@
           </div>
 
           <div class="skills-block">
-            <h3 class="skills-heading">Mindset & Communication</h3>
+            <h3 class="skills-heading" data-translate="skillsSubtitle2">
+              Mindset & Communication
+            </h3>
             <div class="skills-list">
               <div class="soft-skill">
-                <span>Problem Solving</span>
+                <span data-translate="skills1">Problem Solving</span>
               </div>
 
               <div class="soft-skill">
-                <span>Clear Communication</span>
+                <span data-translate="skills2">Clear Communication</span>
               </div>
 
               <div class="soft-skill">
-                <span>Adaptability</span>
+                <span data-translate="skills3">Adaptability</span>
               </div>
 
               <div class="soft-skill">
-                <span>Attention to Detail</span>
+                <span data-translate="skills4">Attention to Detail</span>
               </div>
 
               <div class="soft-skill">
-                <span>Critical Thinking</span>
+                <span data-translate="skills5">Critical Thinking</span>
               </div>
 
               <div class="soft-skill">
-                <span>Creativity</span>
+                <span data-translate="skills6">Creativity</span>
               </div>
             </div>
           </div>
@@ -296,7 +318,7 @@
       <section id="projects-section">
         <div class="projects-section">
           <div class="section-title" data-aos="fade-up" data-aos-delay="100">
-            <h2>Projects</h2>
+            <h2 data-translate="projectsTitle">Projects</h2>
           </div>
           <div class="project-cards" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card">
@@ -306,13 +328,16 @@
                 alt="a header of a website about animal welfare, with two puppies laying on the street on the background"
               />
               <h3>Street Paws</h3>
-              <p>Website to raise awareness about animal welfare</p>
+              <p data-translate="projectsStreetInfo">
+                Website to raise awareness about animal welfare
+              </p>
               <div class="project-links">
                 <div>
                   <a href="https://alyen28.github.io/Street-Paws/"
                     ><button
                       class="live-demo"
                       aria-label="live demo of Street Paws"
+                      data-translate="liveDemo"
                     >
                       Live Demo
                     </button></a
@@ -323,6 +348,7 @@
                     ><button
                       class="view-code"
                       aria-label="view Street Paws' code"
+                      data-translate="projectsCode"
                     >
                       Code <>
                     </button></a
@@ -338,13 +364,16 @@
                 alt="a header of a recipes website, with the photo of a big buffet on the background"
               />
               <h3>The Recipe Journal</h3>
-              <p>Front-end project simulating a recipe website</p>
+              <p data-translate="projectsRecipeInfo">
+                Front-end project simulating a recipe website
+              </p>
               <div class="project-links">
                 <div>
                   <a href="https://alyen28.github.io/The-Recipe-Journal/"
                     ><button
                       class="live-demo"
                       aria-label="live demo of The Recipe Journal"
+                      data-translate="liveDemo"
                     >
                       Live Demo
                     </button></a
@@ -355,6 +384,7 @@
                     ><button
                       class="view-code"
                       aria-label="view The Recipe Journal's code"
+                      data-translate="projectsCode"
                     >
                       Code <>
                     </button></a
@@ -370,7 +400,7 @@
     <footer id="contact-section">
       <div class="contact-section">
         <div class="section-title" data-aos="fade-up" data-aos-delay="100">
-          <h2>Contact Me</h2>
+          <h2 data-translate="contactTitle">Contact Me</h2>
         </div>
 
         <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
@@ -379,20 +409,29 @@
               action="https://formsubmit.co/alyen28.dev@gmail.com"
               method="POST"
             >
-              <input type="text" name="name" placeholder="Name" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+                data-translate-placeholder="inputName"
+              />
               <input type="email" name="email" placeholder="E-mail" required />
               <textarea
                 name="message"
                 placeholder="Message"
                 required
+                data-translate-placeholder="inputMessage"
               ></textarea>
-              <button type="submit">Submit</button>
+              <button type="submit" data-translate="submitButton">
+                Submit
+              </button>
             </form>
           </div>
 
           <div class="contact-links">
             <div class="contact-text">
-              <p>
+              <p data-translate="contactText">
                 I am open to new challenges, projects and partnerships. Let's
                 create something cool together!
               </p>
@@ -462,6 +501,7 @@
         once: true,
       });
     </script>
-    <script type="module" src="script.js"></script>
+    <script src="lang.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

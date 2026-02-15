@@ -1,8 +1,3 @@
-// Hamburger Menu
-import { lang } from "./lang.js";
-
-console.log(lang);
-
 // Theme Switch
 let lightmode = localStorage.getItem("lightmode");
 const themeSwitch = document.getElementById("theme-switch");
