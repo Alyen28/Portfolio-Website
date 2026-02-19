@@ -38,3 +38,29 @@ window.addEventListener("scroll", () => {
   document.querySelector(".scroll-progress").style.width =
     scrollPercentage + "%";
 });
+
+// Hamburguer Menu
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", function () {
+  navLinks.classList.toggle("active");
+});
+
+const links = document.querySelectorAll(".nav-links a");
+
+links.forEach((link) => {
+  link.addEventListener("click", function () {
+    navLinks.classList.remove("active");
+  });
+});
+
+hamburger.addEventListener("click", function () {
+  navLinks.classList.toggle("active");
+
+  if (navLinks.classList.contains("active")) {
+    hamburger.textContent = "✕";
+  } else {
+    hamburger.textContent = "☰";
+  }
+});
