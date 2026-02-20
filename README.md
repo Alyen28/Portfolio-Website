@@ -12,6 +12,21 @@ My personal portfolio website, where I showcase my projects and skills!
 - ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 - ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+## 🔄 v2.0 
+
+### Added
+- Language switch button (Portuguese / English)
+- Responsive hamburger navigation menu
+
+### Improved
+- Cleaner and more modern UI design
+- Better responsiveness
+- Layout spacing and visual hierarchy
+
+### Refactored
+- Code organization
+- Component structure
+
 ## 📈 Future Improvements
 
 - Create multilingual versions (English, Spanish)
