@@ -4,7 +4,7 @@ My personal portfolio website, where I showcase my projects and skills!
 
 ## 🚀 Live Demo
 
-[Check it out here!](https://alyen28.github.io/Portfolio-Website/)
+[Check it out here!](https://github.com/Alyen28/Portfolio-Website.git)
 
 ## 🛠️ Built With
 
