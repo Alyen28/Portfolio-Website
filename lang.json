@@ -1,0 +1,38 @@
+{
+  "pt": {
+    "navHome": "Início",
+    "navAbout": "Sobre",
+    "navSkills": "Habilidades",
+    "navProjects": "Projetos",
+    "navContact": "Contato",
+
+    "heroTitle": "Oi! eu sou Alyne",
+    "heroSubtitle": "Desenvolvedora front-end focada na criação de aplicações limpas, acessíveis e centradas no usuário.",
+    "heroButton": "Ver Projetos",
+
+    "aboutTitle": "Sobre mim",
+    "aboutText1": "Gosto de programar porque me permite criar, experimentar e resolver problemas de forma concreta. Transformar conceitos em projetos funcionais é o que me motiva a continuar aprendendo e evoluindo.",
+    "aboutText2": "Meu objetivo é continuar crescendo como desenvolvedora, me desafiar e colaborar com outras pessoas para dar vida às suas ideias.",
+
+    "skillsTitle": "Habilidades",
+    "skillsSubtitle1": "Código e Ferramentas",
+    "skillsSubtitle2": "Mentalidade e Comunicação",
+    "skills1": "Resolução de Problemas",
+    "skills2": "Comunicação Clara",
+    "skills3": "Adaptabilidade",
+    "skills4": "Atenção aos Detalhes",
+    "skills5": "Pensamento Crítico",
+    "skills6": "Criatividade",
+    "projectsTitle": "Projetos",
+    "projectsStreetInfo": "Site dedicado à conscientização sobre animais em situação de rua",
+    "projectsRecipeInfo": "Projeto front-end que simula uma plataforma digital de receitas.",
+    "liveDemo": "Ver Online",
+    "projectsCode": "Código",
+    "contactTitle": "Entre em Contato",
+    "contactText": "Estou aberta a novos desafios, projetos e parcerias. Vamos criar algo legal juntos!",
+    "submitButton": "Enviar",
+
+    "inputName": "Nome",
+    "inputMessage": "Mensagem"
+  }
+}

@@ -1,143 +1,377 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A portfolio website divided in 4 main sections: Home, About, Projects and Contact.">
+    <meta
+      name="description"
+      content="A portfolio website divided in 4 main sections: Home, About, Projects and Contact."
+    />
 
-    <link rel="preload" as="font" type="font/woff2" href="fonts/baumans-v17-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-v31-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-v31-latin-500.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-v31-latin-600.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-v31-latin-100.woff2" crossorigin>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" />
 
     <title>Portfolio Website</title>
   </head>
-  <body class="">
-      <div class="nav-bar" data-aos="fade" data-aos-delay="100">
-        <div class="nav-links">
-          <ul class="nav-list">
-            <li><a href="#hero-section">Home</a></li>
-            <li><a href="#about-section">About</a></li>
-            <li><a href="#projects-section">Projects</a></li>
-            <li><a href="#contact-section">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <button id="theme-switch" aria-label="theme switch">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#1f1f1f"
+  <body>
+    <nav class="nav-bar">
+      <div class="nav-links">
+        <ul class="nav-list">
+          <li><a href="#hero-section" data-translate="navHome">Home</a></li>
+          <li>
+            <a href="#about-section" data-translate="navAbout">About</a>
+          </li>
+          <li>
+            <a href="#skills-section" data-translate="navSkills">Skills</a>
+          </li>
+          <li>
+            <a href="#projects-section" data-translate="navProjects"
+              >Projects</a
             >
-              <path
-                d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#1f1f1f"
-            >
-              <path
-                d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"
-              />
-            </svg>
-          </button>
-        </div>
+          </li>
+          <li>
+            <a href="#contact-section" data-translate="navContact">Contact</a>
+          </li>
+        </ul>
       </div>
+      <button id="hamburger" class="hamburger" aria-label="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-buttons">
+        <button id="theme-switch" aria-label="theme switch">
+          <svg viewBox="0 -960 960 960" fill="currentColor">
+            <path
+              d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"
+            />
+          </svg>
+          <svg viewBox="0 -960 960 960" fill="currentColor">
+            <path
+              d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"
+            />
+          </svg>
+        </button>
+        <button id="lang-switch" aria-label="language switch"></button>
+      </div>
+
+      <div class="scroll-progress"></div>
+    </nav>
 
     <main>
       <header id="hero-section">
         <div class="hero-section" data-aos="fade" data-aos-delay="100">
-          <div class="hero-image"><img src="assets/logo.webp" loading="lazy" alt="a cyan alien's head with a pink star on the left and a pink waning moon on the right"/></div>
+          <div class="hero-image">
+            <img
+              src="assets/new-logo.webp"
+              loading="lazy"
+              alt="a cyan alien's head with a pink star on the left and a pink waning moon on the right"
+            />
+          </div>
           <div class="hero-text">
-            <h1 class="hero-title">Hi, I'm Alyne!</h1>
-            <p class="hero-subtitle">
-              I'm an aspiring software engineer, passionate about technology, design
-              and worlds - real and imaginary. Welcome to my digital galaxy.
+            <h1 class="hero-title" data-translate="heroTitle">Hi! I'm Alyne</h1>
+            <p class="hero-subtitle" data-translate="heroSubtitle">
+              Front-end developer focused on building clean, accessible, and
+              user-centered web experiences.
             </p>
+            <a href="#projects-section"
+              ><button data-translate="heroButton">View Projects</button></a
+            >
           </div>
         </div>
       </header>
 
       <section id="about-section">
-        <div class="about-section" data-aos="fade-up" data-aos-offset="160" data-aos-delay="100">
-          <div class="section-title"><h2>About Me</h2></div>
+        <div
+          class="about-section"
+          data-aos="fade-up"
+          data-aos-offset="160"
+          data-aos-delay="100"
+        >
+          <div class="section-title">
+            <h2 data-translate="aboutTitle">About Me</h2>
+          </div>
           <div class="about-text">
-            <p>
-              I enjoy turning ideas into interactive experiences. My goal is to
-              grow as a developer by building projects that challenge me and
-              eventually help others bring their ideas to life.
+            <p data-translate="aboutText1">
+              I enjoy programming because it allows me to create, experiment,
+              and solve problems in a tangible way. Turning concepts into
+              working projects is what motivates me to keep learning and
+              improving.
             </p>
-            <p>
-              I'm currently learning HTML, CSS, and JavaScript while also
-              exploring Python for backend development, this is my progress so far:
+            <p data-translate="aboutText2">
+              My goal is to grow continuously as a developer by challenging
+              myself and collaborating with others to help bring their ideas to
+              life.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div id="about-skills">
-            <div class="skill">
-              <span>HTML</span>
-              <div class="progress-bar">
-                <div class="progress" data-progress="60"></div>
+      <section id="skills-section">
+        <div
+          class="skills-section"
+          data-aos="fade-up"
+          data-aos-offset="160"
+          data-aos-delay="100"
+        >
+          <div class="section-title">
+            <h2 data-translate="skillsTitle">Core Skills</h2>
+          </div>
+
+          <div class="skills-block">
+            <h3 class="skills-heading" data-translate="skillsSubtitle1">
+              Code & Tools
+            </h3>
+            <div class="skills-list">
+              <div class="hard-skill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 128 128"
+                  alt="HTML5 logo"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M9.032 2l10.005 112.093 44.896 12.401 45.02-12.387L118.968 2H9.032zm89.126 26.539l-.627 7.172L97.255 39H44.59l1.257 14h50.156l-.336 3.471-3.233 36.119-.238 2.27L64 102.609v.002l-.034.018-28.177-7.423L33.876 74h13.815l.979 10.919L63.957 89H64v-.546l15.355-3.875L80.959 67H33.261l-3.383-38.117L29.549 25h68.939l-.33 3.539z"
+                  />
+                </svg>
+                <span>HTML5</span>
+              </div>
+
+              <div class="hard-skill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 128 128"
+                  alt="CSS3 logo"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M8.76 1l10.055 112.883 45.118 12.58 45.244-12.626L119.24 1H8.76zm89.591 25.862l-3.347 37.605.01.203-.014.467v-.004l-2.378 26.294-.262 2.336L64 101.607v.001l-.022.019-28.311-7.888L33.75 72h13.883l.985 11.054 15.386 4.17-.004.008v-.002l15.443-4.229L81.075 65H48.792l-.277-3.043-.631-7.129L47.553 51h34.749l1.264-14H30.64l-.277-3.041-.63-7.131L29.401 23h69.281l-.331 3.862z"
+                  />
+                </svg>
+                <span>CSS3</span>
+              </div>
+
+              <div class="hard-skill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 128 128"
+                  alt="JavaScript Logo"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M2 1v125h125V1H2zm66.119 106.513c-1.845 3.749-5.367 6.212-9.448 7.401-6.271 1.44-12.269.619-16.731-2.059-2.986-1.832-5.318-4.652-6.901-7.901l9.52-5.83c.083.035.333.487.667 1.071 1.214 2.034 2.261 3.474 4.319 4.485 2.022.69 6.461 1.131 8.175-2.427 1.047-1.81.714-7.628.714-14.065C58.433 78.073 58.48 68 58.48 58h11.709c0 11 .06 21.418 0 32.152.025 6.58.596 12.446-2.07 17.361zm48.574-3.308c-4.07 13.922-26.762 14.374-35.83 5.176-1.916-2.165-3.117-3.296-4.26-5.795 4.819-2.772 4.819-2.772 9.508-5.485 2.547 3.915 4.902 6.068 9.139 6.949 5.748.702 11.531-1.273 10.234-7.378-1.333-4.986-11.77-6.199-18.873-11.531-7.211-4.843-8.901-16.611-2.975-23.335 1.975-2.487 5.343-4.343 8.877-5.235l3.688-.477c7.081-.143 11.507 1.727 14.756 5.355.904.916 1.642 1.904 3.022 4.045-3.772 2.404-3.76 2.381-9.163 5.879-1.154-2.486-3.069-4.046-5.093-4.724-3.142-.952-7.104.083-7.926 3.403-.285 1.023-.226 1.975.227 3.665 1.273 2.903 5.545 4.165 9.377 5.926 11.031 4.474 14.756 9.271 15.672 14.981.882 4.916-.213 8.105-.38 8.581z"
+                  />
+                </svg>
+                <span>JavaScript</span>
+              </div>
+
+              <div class="hard-skill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 128 128"
+                  alt="Python logo"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M49.33 62h29.159C86.606 62 93 55.132 93 46.981V19.183c0-7.912-6.632-13.856-14.555-15.176-5.014-.835-10.195-1.215-15.187-1.191-4.99.023-9.612.448-13.805 1.191C37.098 6.188 35 10.758 35 19.183V30h29v4H23.776c-8.484 0-15.914 5.108-18.237 14.811-2.681 11.12-2.8 17.919 0 29.53C7.614 86.983 12.569 93 21.054 93H31V79.952C31 70.315 39.428 62 49.33 62zm-1.838-39.11c-3.026 0-5.478-2.479-5.478-5.545 0-3.079 2.451-5.581 5.478-5.581 3.015 0 5.479 2.502 5.479 5.581-.001 3.066-2.465 5.545-5.479 5.545zm74.789 25.921C120.183 40.363 116.178 34 107.682 34H97v12.981C97 57.031 88.206 65 78.489 65H49.33C41.342 65 35 72.326 35 80.326v27.8c0 7.91 6.745 12.564 14.462 14.834 9.242 2.717 17.994 3.208 29.051 0C85.862 120.831 93 116.549 93 108.126V97H64v-4h43.682c8.484 0 11.647-5.776 14.599-14.66 3.047-9.145 2.916-17.799 0-29.529zm-41.955 55.606c3.027 0 5.479 2.479 5.479 5.547 0 3.076-2.451 5.579-5.479 5.579-3.015 0-5.478-2.502-5.478-5.579 0-3.068 2.463-5.547 5.478-5.547z"
+                  />
+                </svg>
+                <span>Python</span>
+              </div>
+
+              <div class="hard-skill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 128 128"
+                  alt="PyCharm Logo"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m55.54 5.486-42.874 17.97-7.18 75.665 40.131 23.393 8.094-9.543 33.11 9.324 35.693-12.117-10.192-38.633 9.412-19.15-20.662-17.184v65.861H26.93V26.93h68.754L92.525 5.486 76.871 19.473 55.54 5.486zM27.93 27.93v72.142h72.142V27.93H27.93zm47.894 8.19a14.129 14.129 0 0 1 10.803 4.218l-3.828 4.426a10.155 10.155 0 0 0-7.012-3.096c-4.62 0-7.947 3.838-7.947 8.531v.086c0 4.693 3.254 8.606 7.947 8.606 3.133 0 5.047-1.218 7.205-3.205l3.828 3.863a13.97 13.97 0 0 1-11.226 4.877A13.836 13.836 0 0 1 61.55 50.359v-.074A13.909 13.909 0 0 1 75.824 36.12zm-39.254.45h11.215c6.534 0 10.496 3.878 10.496 9.473v.072c0 6.34-4.936 9.631-11.08 9.631h-4.533v8.217h-6.096L36.57 36.57zm6.098 5.438v8.375h4.703c3.011 0 4.78-1.792 4.78-4.145v-.074c0-2.706-1.877-4.156-4.876-4.156h-4.607zm-6.121 44.738h27.43v4.572h-27.43v-4.572z"
+                  />
+                </svg>
+                <span>PyCharm</span>
+              </div>
+
+              <div class="hard-skill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 128 128"
+                  alt="VSCode Logo"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M90.767 127.126a7.968 7.968 0 0 0 6.35-.244l26.353-12.681a8 8 0 0 0 4.53-7.209V21.009a8 8 0 0 0-4.53-7.21L97.117 1.12a7.97 7.97 0 0 0-9.093 1.548l-50.45 46.026L15.6 32.013a5.328 5.328 0 0 0-6.807.302l-7.048 6.411a5.335 5.335 0 0 0-.006 7.888L20.796 64 1.74 81.387a5.336 5.336 0 0 0 .006 7.887l7.048 6.411a5.327 5.327 0 0 0 6.807.303l21.974-16.68 50.45 46.025a7.96 7.96 0 0 0 2.743 1.793Zm5.252-92.183L57.74 64l38.28 29.058V34.943Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>VSCode</span>
+              </div>
+
+              <div class="hard-skill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 128 128"
+                  alt="Git Logo"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M124.742 58.378L69.625 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.685 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314a9.66 9.66 0 012.293 9.993L87.42 55.529c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.578 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.779 3.777 3.779 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-4.088-9.905-.311-13.683.934-.933 1.855-1.638 2.855-2.11V47.333c-1-.472-1.92-1.172-2.856-2.111-2.861-2.86-3.396-7.06-1.928-10.576L40.983 20.333 3.229 58.123c-3.175 3.177-3.155 8.325.02 11.5l55.126 55.114c3.173 3.174 8.325 3.174 11.503 0l54.86-54.858c3.175-3.176 3.178-8.327.004-11.501z"
+                  />
+                </svg>
+                <span>Git</span>
+              </div>
+
+              <div class="hard-skill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 128 128"
+                  alt="GitHub Logo"
+                >
+                  <g fill="currentColor">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
+                    />
+                    <path
+                      d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
+                    />
+                  </g>
+                </svg>
+                <span>GitHub</span>
+              </div>
+
+              <div class="hard-skill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 128 128"
+                  alt="Figma Logo"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M45.5 129c11.9 0 21.5-9.6 21.5-21.5V86H45.5C33.6 86 24 95.6 24 107.5S33.6 129 45.5 129zm0 0M24 64.5C24 52.6 33.6 43 45.5 43H67v43H45.5C33.6 86 24 76.4 24 64.5zm0 0M24 21.5C24 9.6 33.6 0 45.5 0H67v43H45.5C33.6 43 24 33.4 24 21.5zm0 0M67 0h21.5C100.4 0 110 9.6 110 21.5S100.4 43 88.5 43H67zm0 0M110 64.5c0 11.9-9.6 21.5-21.5 21.5S67 76.4 67 64.5 76.6 43 88.5 43 110 52.6 110 64.5zm0 0"
+                  />
+                </svg>
+                <span>Figma</span>
               </div>
             </div>
+          </div>
 
-            <div class="skill">
-              <span>CSS</span>
-              <div class="progress-bar">
-                <div class="progress" data-progress="50"></div>
+          <div class="skills-block">
+            <h3 class="skills-heading" data-translate="skillsSubtitle2">
+              Mindset & Communication
+            </h3>
+            <div class="skills-list">
+              <div class="soft-skill">
+                <span data-translate="skills1">Problem Solving</span>
+              </div>
+
+              <div class="soft-skill">
+                <span data-translate="skills2">Clear Communication</span>
+              </div>
+
+              <div class="soft-skill">
+                <span data-translate="skills3">Adaptability</span>
+              </div>
+
+              <div class="soft-skill">
+                <span data-translate="skills4">Attention to Detail</span>
+              </div>
+
+              <div class="soft-skill">
+                <span data-translate="skills5">Critical Thinking</span>
+              </div>
+
+              <div class="soft-skill">
+                <span data-translate="skills6">Creativity</span>
               </div>
             </div>
-
-            <div class="skill">
-              <span>JavaScript</span>
-              <div class="progress-bar">
-                <div class="progress" data-progress="20"></div>
-              </div>
-            </div> 
-
-            <div class="skill">
-              <span>Python</span>
-              <div class="progress-bar">
-                <div class="progress" data-progress="40"></div>
-              </div>
-            </div> 
+          </div>
         </div>
       </section>
 
       <section id="projects-section">
-        <div class="projects-section" data-aos="fade-up" data-aos-delay="100">
-          <div class="section-title"><h2>Projects</h2></div>
-          <div class="project-cards">
+        <div class="projects-section">
+          <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+            <h2 data-translate="projectsTitle">Projects</h2>
+          </div>
+          <div class="project-cards" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card">
-              <img src="assets/street-paws.webp" loading="lazy" alt="a header of a website about animal welfare, with two puppies laying on the street on the background">
+              <img
+                src="assets/street-paws.webp"
+                loading="lazy"
+                alt="a header of a website about animal welfare, with two puppies laying on the street on the background"
+              />
               <h3>Street Paws</h3>
-              <p>Website to raise awareness about animal welfare</p>
+              <p data-translate="projectsStreetInfo">
+                Website to raise awareness about animal welfare
+              </p>
               <div class="project-links">
-                <div><a href="https://alyen28.github.io/Street-Paws/"><button aria-label="live demo of Street Paws">Live Demo</button></a></div>
-                <div><a href="https://github.com/Alyen28/Street-Paws.git"><button aria-label="view Street Paws' code">Code <></button></a></div>
+                <a href="https://alyen28.github.io/Street-Paws/"
+                  ><button
+                    class="live-demo"
+                    aria-label="live demo of Street Paws"
+                    data-translate="liveDemo"
+                  >
+                    Live Demo
+                  </button></a
+                >
+                <a href="https://github.com/Alyen28/Street-Paws.git"
+                  ><button
+                    class="view-code"
+                    aria-label="view Street Paws' code"
+                    data-translate="projectsCode"
+                  >
+                    View Code
+                  </button></a
+                >
               </div>
             </div>
 
             <div class="project-card">
-              <img src="assets/the-recipe-journal.webp" loading="lazy" alt="a header of a recipes website, with the photo of a big buffet on the background">
+              <img
+                src="assets/the-recipe-journal.webp"
+                loading="lazy"
+                alt="a header of a recipes website, with the photo of a big buffet on the background"
+              />
               <h3>The Recipe Journal</h3>
-              <p>Front-end project simulating a recipe website</p>
+              <p data-translate="projectsRecipeInfo">
+                Front-end project simulating a recipe website
+              </p>
               <div class="project-links">
-                <div><a href="https://alyen28.github.io/The-Recipe-Journal/"><button aria-label="live demo of The Recipe Journal">Live Demo</button></a></div>
-                <div><a href="https://github.com/Alyen28/The-Recipe-Journal.git"><button aria-label="view The Recipe Journal's code">Code <></button></a></div>
+                <a href="https://alyen28.github.io/The-Recipe-Journal/"
+                  ><button
+                    class="live-demo"
+                    aria-label="live demo of The Recipe Journal"
+                    data-translate="liveDemo"
+                  >
+                    Live Demo
+                  </button></a
+                >
+                <a href="https://github.com/Alyen28/The-Recipe-Journal.git"
+                  ><button
+                    class="view-code"
+                    aria-label="view The Recipe Journal's code"
+                    data-translate="projectsCode"
+                  >
+                    View Code
+                  </button></a
+                >
               </div>
             </div>
           </div>
@@ -147,41 +381,109 @@
 
     <footer id="contact-section">
       <div class="contact-section">
+        <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+          <h2 data-translate="contactTitle">Contact Me</h2>
+        </div>
 
-        <div class="section-title" style="text-align: center;" data-aos="fade-up" data-aos-delay="100"><h2>Contact Me</h2></div>
-        <div class="contact-container">
-          <div class="contact-form" data-aos="fade-up" data-aos-delay="100">
-            <form action="https://formsubmit.co/alyen28.dev@gmail.com" method="POST">
-              <input type="text" name="name" placeholder="Enter your name" required>
-              <input type="email" name="email" placeholder="Enter your best e-mail" required>
-              <textarea name="message" placeholder="Enter your message" required></textarea>
-              <button type="submit">Submit</button>
+        <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-form">
+            <form
+              action="https://formsubmit.co/alyen28.dev@gmail.com"
+              method="POST"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+                data-translate-placeholder="inputName"
+              />
+              <input type="email" name="email" placeholder="Email" required />
+              <textarea
+                name="message"
+                placeholder="Message"
+                required
+                data-translate-placeholder="inputMessage"
+              ></textarea>
+              <button type="submit" data-translate="submitButton">
+                Submit
+              </button>
             </form>
           </div>
-          <div>
-            <div class="contact-links">
-              <a href="https://github.com/Alyen28" target="_blank" aria-label="link to my GitHub contact">
-                <i class="fab fa-github"></i>
+
+          <div class="contact-links">
+            <div class="contact-text">
+              <p data-translate="contactText">
+                I am open to new challenges, projects and partnerships. Let's
+                create something cool together!
+              </p>
+            </div>
+            <div class="contact-icons">
+              <a
+                href="https://github.com/Alyen28"
+                target="_blank"
+                aria-label="link to my GitHub contact"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.3724 0 0 5.3808 0 12.0204C0 17.3304 3.438 21.8364 8.2068 23.4252C8.8068 23.5356 9.0252 23.1648 9.0252 22.8456C9.0252 22.5612 9.0156 21.804 9.0096 20.802C5.6712 21.528 4.9668 19.1904 4.9668 19.1904C4.422 17.8008 3.6348 17.4312 3.6348 17.4312C2.5452 16.6872 3.7176 16.7016 3.7176 16.7016C4.9212 16.7856 5.5548 17.94 5.5548 17.94C6.6252 19.776 8.364 19.2456 9.0468 18.9384C9.1572 18.162 9.4668 17.6328 9.81 17.3328C7.146 17.0292 4.344 15.9972 4.344 11.3916C4.344 10.08 4.812 9.006 5.5788 8.166C5.4552 7.8624 5.0436 6.6396 5.6964 4.986C5.6964 4.986 6.7044 4.662 8.9964 6.2172C9.97532 5.95022 10.9853 5.81423 12 5.8128C13.02 5.8176 14.046 5.9508 15.0048 6.2172C17.2956 4.662 18.3012 4.9848 18.3012 4.9848C18.9564 6.6396 18.5436 7.8624 18.4212 8.166C19.1892 9.006 19.6548 10.08 19.6548 11.3916C19.6548 16.0092 16.848 17.0256 14.1756 17.3232C14.6064 17.694 14.9892 18.4272 14.9892 19.5492C14.9892 21.1548 14.9748 22.452 14.9748 22.8456C14.9748 23.1672 15.1908 23.5416 15.8004 23.424C18.19 22.6225 20.2672 21.0904 21.7386 19.0441C23.2099 16.9977 24.001 14.5408 24 12.0204C24 5.3808 18.6264 0 12 0Z"
+                    fill="currentColor"
+                  />
+                </svg>
               </a>
-              <a href="https://linkedin.com/in/alyne-feitosa" target="_blank" aria-label="link to my LinkedIn contact">
-                <i class="fab fa-linkedin"></i>
+              <a
+                href="https://linkedin.com/in/alyne-feitosa"
+                target="_blank"
+                aria-label="link to my LinkedIn contact"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5563 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2938 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516V20.4516Z"
+                    fill="currentColor"
+                  />
+                </svg>
               </a>
-              <a href="https://t.me/alyen28" target="_blank" aria-label="link to my Telegram contact">
-                <i class="fab fa-telegram"></i>
+              <a
+                href="https://discord.com/users/758289221777358900"
+                target="_blank"
+                aria-label="link to my Discord contact"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.317 4.15557C18.7873 3.45369 17.147 2.93658 15.4319 2.6404C15.4007 2.63469 15.3695 2.64897 15.3534 2.67754C15.1424 3.05276 14.9087 3.54226 14.7451 3.927C12.9004 3.65083 11.0652 3.65083 9.25832 3.927C9.09465 3.5337 8.85248 3.05276 8.64057 2.67754C8.62448 2.64992 8.59328 2.63564 8.56205 2.6404C6.84791 2.93563 5.20756 3.45275 3.67694 4.15557C3.66368 4.16129 3.65233 4.17082 3.64479 4.18319C0.533392 8.83155 -0.31895 13.3657 0.0991801 17.8436C0.101072 17.8655 0.11337 17.8864 0.130398 17.8997C2.18321 19.4073 4.17171 20.3225 6.12328 20.9291C6.15451 20.9386 6.18761 20.9272 6.20748 20.9015C6.66913 20.2711 7.08064 19.6063 7.43348 18.9073C7.4543 18.8664 7.43442 18.8178 7.39186 18.8016C6.73913 18.554 6.1176 18.2521 5.51973 17.9093C5.47244 17.8816 5.46865 17.814 5.51216 17.7816C5.63797 17.6873 5.76382 17.5893 5.88395 17.4902C5.90569 17.4721 5.93598 17.4683 5.96153 17.4797C9.88928 19.273 14.1415 19.273 18.023 17.4797C18.0485 17.4674 18.0788 17.4712 18.1015 17.4893C18.2216 17.5883 18.3475 17.6873 18.4742 17.7816C18.5177 17.814 18.5149 17.8816 18.4676 17.9093C17.8697 18.2588 17.2482 18.554 16.5945 18.8006C16.552 18.8168 16.533 18.8664 16.5538 18.9073C16.9143 19.6054 17.3258 20.2701 17.7789 20.9005C17.7978 20.9272 17.8319 20.9386 17.8631 20.9291C19.8241 20.3225 21.8126 19.4073 23.8654 17.8997C23.8834 17.8864 23.8948 17.8664 23.8967 17.8445C24.3971 12.6676 23.0585 8.17064 20.3482 4.18414C20.3416 4.17082 20.3303 4.16129 20.317 4.15557ZM8.02002 15.117C6.8375 15.117 5.86313 14.0313 5.86313 12.6981C5.86313 11.3648 6.8186 10.2791 8.02002 10.2791C9.23087 10.2791 10.1958 11.3743 10.1769 12.6981C10.1769 14.0313 9.22141 15.117 8.02002 15.117ZM15.9947 15.117C14.8123 15.117 13.8379 14.0313 13.8379 12.6981C13.8379 11.3648 14.7933 10.2791 15.9947 10.2791C17.2056 10.2791 18.1705 11.3743 18.1516 12.6981C18.1516 14.0313 17.2056 15.117 15.9947 15.117Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://t.me/alyen28"
+                target="_blank"
+                aria-label="link to my Telegram contact"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM12.43 8.85893C11.2628 9.3444 8.93014 10.3492 5.43189 11.8733C4.86383 12.0992 4.56626 12.3202 4.53917 12.5363C4.49339 12.9015 4.95071 13.0453 5.57348 13.2411C5.65819 13.2678 5.74596 13.2954 5.83594 13.3246C6.44864 13.5238 7.27283 13.7568 7.70129 13.766C8.08994 13.7744 8.52373 13.6142 9.00264 13.2853C12.2712 11.079 13.9584 9.96381 14.0643 9.93977C14.139 9.92281 14.2426 9.90148 14.3128 9.96385C14.3829 10.0262 14.376 10.1443 14.3686 10.176C14.3233 10.3691 12.5281 12.0381 11.5991 12.9018C11.3095 13.171 11.1041 13.362 11.0621 13.4056C10.968 13.5033 10.8721 13.5958 10.78 13.6846C10.2108 14.2333 9.78391 14.6448 10.8036 15.3168C11.2936 15.6397 11.6857 15.9067 12.0769 16.1731C12.5042 16.4641 12.9303 16.7543 13.4816 17.1157C13.6221 17.2077 13.7562 17.3034 13.8869 17.3965C14.3841 17.751 14.8307 18.0694 15.3826 18.0186C15.7032 17.9891 16.0345 17.6876 16.2027 16.7884C16.6002 14.6631 17.3816 10.0585 17.5622 8.16097C17.578 7.99473 17.5581 7.78197 17.5422 7.68857C17.5262 7.59518 17.4928 7.46211 17.3714 7.3636C17.2276 7.24694 17.0056 7.22234 16.9064 7.22408C16.455 7.23203 15.7626 7.47282 12.43 8.85893Z"
+                    fill="currentColor"
+                  />
+                </svg>
               </a>
             </div>
-            <div class="copy"><p>&copy; 2025 Alyne | All rights reserved</p></div>
           </div>
         </div>
       </div>
+      <div class="copy">
+        <p>&copy; 2026 | Alyne Feitosa</p>
+      </div>
     </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
-        duration: 2000, 
-        once: true,     
+        duration: 2000,
+        once: true,
       });
     </script>
+    <script src="lang.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

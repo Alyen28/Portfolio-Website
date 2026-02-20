@@ -1,4 +1,4 @@
-// Lightmode / Theme Switch
+// Theme Switch
 let lightmode = localStorage.getItem("lightmode");
 const themeSwitch = document.getElementById("theme-switch");
 
@@ -23,21 +23,28 @@ themeSwitch.addEventListener("click", () => {
   }
 });
 
-// Progress Bar
-const progressBars = document.querySelectorAll(".progress");
+// Scroll Progress Bar
+window.addEventListener("scroll", () => {
+  const scrollPercentage =
+    (window.scrollY /
+      (document.documentElement.scrollHeight - window.innerHeight)) *
+    100;
+  document.querySelector(".scroll-progress").style.width =
+    scrollPercentage + "%";
+});
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const target = entry.target;
-        const finalWidth = target.getAttribute("data-progress") + "%";
-        target.style.width = finalWidth;
-        observer.unobserve(target); // animate only once
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
+// Hamburger Menu
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
 
-progressBars.forEach((bar) => observer.observe(bar));
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-list a").forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  });
+});
