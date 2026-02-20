@@ -26,8 +26,6 @@ Icons and visual assets used in this project were sourced from:
 - [Devicon](https://devicon.dev/)
 - [Heroicons](https://heroicons.com/)
 
-- [Font Awesome](https://fontawesome.com/) for the footer icons
-
 ## 📫 Contact
 
 - GitHub: [Alyen28](https://github.com/Alyen28)
