@@ -21,12 +21,12 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" />
 
     <title>Portfolio Website</title>
   </head>
   <body>
-    <nav class="nav-bar" data-aos="fade" data-aos-delay="100">
+    <nav class="nav-bar">
       <div class="nav-links">
         <ul class="nav-list">
           <li><a href="#hero-section" data-translate="navHome">Home</a></li>
@@ -46,6 +46,12 @@
           </li>
         </ul>
       </div>
+      <button id="hamburger" class="hamburger" aria-label="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <div class="nav-buttons">
         <button id="theme-switch" aria-label="theme switch">
           <svg viewBox="0 -960 960 960" fill="currentColor">
@@ -76,9 +82,7 @@
             />
           </div>
           <div class="hero-text">
-            <h1 class="hero-title" data-translate="heroTitle">
-              Hi! I'm Alyne.
-            </h1>
+            <h1 class="hero-title" data-translate="heroTitle">Hi! I'm Alyne</h1>
             <p class="hero-subtitle" data-translate="heroSubtitle">
               Front-end developer focused on building clean, accessible, and
               user-centered web experiences.
@@ -318,28 +322,24 @@
                 Website to raise awareness about animal welfare
               </p>
               <div class="project-links">
-                <div>
-                  <a href="https://alyen28.github.io/Street-Paws/"
-                    ><button
-                      class="live-demo"
-                      aria-label="live demo of Street Paws"
-                      data-translate="liveDemo"
-                    >
-                      Live Demo
-                    </button></a
+                <a href="https://alyen28.github.io/Street-Paws/"
+                  ><button
+                    class="live-demo"
+                    aria-label="live demo of Street Paws"
+                    data-translate="liveDemo"
                   >
-                </div>
-                <div>
-                  <a href="https://github.com/Alyen28/Street-Paws.git"
-                    ><button
-                      class="view-code"
-                      aria-label="view Street Paws' code"
-                      data-translate="projectsCode"
-                    >
-                      View Code
-                    </button></a
+                    Live Demo
+                  </button></a
+                >
+                <a href="https://github.com/Alyen28/Street-Paws.git"
+                  ><button
+                    class="view-code"
+                    aria-label="view Street Paws' code"
+                    data-translate="projectsCode"
                   >
-                </div>
+                    View Code
+                  </button></a
+                >
               </div>
             </div>
 
@@ -354,28 +354,24 @@
                 Front-end project simulating a recipe website
               </p>
               <div class="project-links">
-                <div>
-                  <a href="https://alyen28.github.io/The-Recipe-Journal/"
-                    ><button
-                      class="live-demo"
-                      aria-label="live demo of The Recipe Journal"
-                      data-translate="liveDemo"
-                    >
-                      Live Demo
-                    </button></a
+                <a href="https://alyen28.github.io/The-Recipe-Journal/"
+                  ><button
+                    class="live-demo"
+                    aria-label="live demo of The Recipe Journal"
+                    data-translate="liveDemo"
                   >
-                </div>
-                <div>
-                  <a href="https://github.com/Alyen28/The-Recipe-Journal.git"
-                    ><button
-                      class="view-code"
-                      aria-label="view The Recipe Journal's code"
-                      data-translate="projectsCode"
-                    >
-                      View Code
-                    </button></a
+                    Live Demo
+                  </button></a
+                >
+                <a href="https://github.com/Alyen28/The-Recipe-Journal.git"
+                  ><button
+                    class="view-code"
+                    aria-label="view The Recipe Journal's code"
+                    data-translate="projectsCode"
                   >
-                </div>
+                    View Code
+                  </button></a
+                >
               </div>
             </div>
           </div>
