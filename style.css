@@ -633,7 +633,7 @@ textarea::placeholder {
     margin-bottom: 0.8em;
   }
   .hero-image {
-    min-width: 200px;
+    min-width: 190px;
     max-width: 250px;
   }
   .project-cards {
@@ -772,26 +772,27 @@ textarea::placeholder {
     top: 74px;
   }
   .hero-section {
-    padding: 9em 1em 5em 1em;
+    padding: 9em 1em 7em 1em;
   }
   .hero-title {
-    font-size: clamp(2.5em, 4.5vw, 4.5em);
+    font-size: clamp(2.2em, 10vw, 4.5em);
     margin-bottom: 0.3em;
   }
   .hero-subtitle {
-    font-size: clamp(1.4em, 3vw, 2.6em);
+    font-size: clamp(1.4em, 6vw, 2.6em);
     margin-bottom: 1.2em;
-  }
-  .hero-image {
-    min-width: 160px;
-    max-width: 220px;
-    margin-bottom: 1em;
   }
   .hero-text button {
     font-size: clamp(1.2em, 1.8vw, 1.8em);
   }
+  .section-title {
+    font-size: clamp(1.7em, 6vw, 2.8em);
+  }
   .about-section {
     padding: 7em 1em 2em 1em;
+  }
+  .about-text {
+    font-size: clamp(1.3em, 6vw, 2.6em);
   }
   .skills-section {
     padding: 7em 1em 2em 1em;
