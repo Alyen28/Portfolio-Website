@@ -15,14 +15,13 @@
     "aboutText2": "Meu objetivo é continuar crescendo como desenvolvedora, me desafiar e colaborar com outras pessoas para dar vida às suas ideias.",
 
     "skillsTitle": "Habilidades",
-    "skillsSubtitle1": "Código e Ferramentas",
-    "skillsSubtitle2": "Mentalidade e Comunicação",
     "skills1": "Resolução de Problemas",
     "skills2": "Comunicação Clara",
     "skills3": "Adaptabilidade",
     "skills4": "Atenção aos Detalhes",
     "skills5": "Pensamento Crítico",
     "skills6": "Criatividade",
+
     "projectsTitle": "Projetos",
     "projectsStreetInfo": "Site dedicado à conscientização sobre animais em situação de rua",
     "projectsRecipeInfo": "Projeto front-end que simula uma plataforma digital de receitas.",
@@ -33,6 +32,23 @@
     "submitButton": "Enviar",
 
     "inputName": "Nome",
-    "inputMessage": "Mensagem"
+    "inputMessage": "Mensagem",
+
+    "altLogoHero": "Cabeça de um alienígena ciano com um símbolo rosa embaixo",
+    "altStreetPaws": "Cabeçalho de um site sobre bem-estar animal, com o título 'Street Paws",
+    "altRecipeJournal": "Cabeçalho de um site de receitas, com o título 'The Recipe Journal'",
+
+    "ariaThemeSwitch": "Mudar tema",
+    "ariaLangSwitch": "Mudar idioma",
+
+    "ariaStreetPawsDemo": "Demo ao vivo de Street Paws",
+    "ariaStreetPawsCode": "Ver código de Street Paws",
+    "ariaRecipeJournalDemo": "Demo ao vivo de The Recipe Journal",
+    "ariaRecipeJournalCode": "Ver código de The Recipe Journal",
+
+    "ariaGitHubLink": "Link para meu contato GitHub",
+    "ariaLinkedInLink": "Link para meu contato LinkedIn",
+    "ariaDiscordLink": "Link para meu contato Discord",
+    "ariaTelegramLink": "Link para meu contato Telegram"
   }
 }

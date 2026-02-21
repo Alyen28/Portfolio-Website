@@ -1,43 +1,53 @@
+/**
+ * Portfolio Website - Language & Translation Module
+ * Manages multi-language support (English/Portuguese)
+ */
+
 const LANG_JSON_PATH = "lang.json";
 
-// DOM elements
+// DOM elements for translation
 const langButton = document.getElementById("lang-switch");
 const translatableTextEls = document.querySelectorAll("[data-translate]");
-const translatablePlaceholderEls = document.querySelectorAll(
-  "[data-translate-placeholder]",
-);
+const translatablePlaceholderEls = document.querySelectorAll("[data-translate-placeholder]");
 const translatableAltEls = document.querySelectorAll("[data-translate-alt]");
 const translatableAriaEls = document.querySelectorAll("[data-translate-aria]");
 
-//
+// State management
 let translations = null;
 let currentLang = localStorage.getItem("language") || "en";
 const original = {};
 
-//
+// ===================================
+// TRANSLATION DATA CAPTURE & STORAGE
+// ===================================
+
+/**
+ * Captures original text content and attributes for fallback
+ * when translations are not available
+ */
 function captureOriginals() {
-  // Text content
+  // Capture text content
   translatableTextEls.forEach((el) => {
     const key = el.getAttribute("data-translate");
     if (!original[key]) original[key] = {};
     original[key].text = el.textContent.trim();
   });
 
-  // Placeholders
+  // Capture placeholder attributes
   translatablePlaceholderEls.forEach((el) => {
     const key = el.getAttribute("data-translate-placeholder");
     if (!original[key]) original[key] = {};
     original[key].placeholder = el.getAttribute("placeholder") || "";
   });
 
-  // Alt attributes
+  // Capture alt attributes
   translatableAltEls.forEach((el) => {
     const key = el.getAttribute("data-translate-alt");
     if (!original[key]) original[key] = {};
     original[key].alt = el.getAttribute("alt") || "";
   });
 
-  // Aria-label
+  // Capture aria-label attributes
   translatableAriaEls.forEach((el) => {
     const key = el.getAttribute("data-translate-aria");
     if (!original[key]) original[key] = {};
@@ -45,84 +55,88 @@ function captureOriginals() {
   });
 }
 
-//
+// ===================================
+// TRANSLATION APPLICATION
+// ===================================
+
+/**
+ * Helper function to get translated value or fallback to original
+ */
+function getTranslatedValue(key, prop, lang) {
+  if (lang === "en") {
+    return original[key]?.[prop] || "";
+  }
+  
+  const translated = translations?.[lang]?.[key];
+  return translated || original[key]?.[prop] || "";
+}
+
+/**
+ * Applies language translation to all elements in the page
+ * Supports text, placeholders, alt attributes, and ARIA labels
+ */
 function applyLanguage(lang) {
-  // Text content
+  // Apply text content translations
   translatableTextEls.forEach((el) => {
     const key = el.getAttribute("data-translate");
-    const translated =
-      (translations && translations[lang] && translations[lang][key]) || null;
-    el.textContent =
-      lang === "en"
-        ? (original[key] && original[key].text) || ""
-        : translated || (original[key] && original[key].text) || "";
+    el.textContent = getTranslatedValue(key, "text", lang);
   });
 
-  // Placeholders
+  // Apply placeholder translations
   translatablePlaceholderEls.forEach((el) => {
     const key = el.getAttribute("data-translate-placeholder");
-    const translated =
-      (translations && translations[lang] && translations[lang][key]) || null;
-    el.setAttribute(
-      "placeholder",
-      lang === "en"
-        ? (original[key] && original[key].placeholder) || ""
-        : translated || (original[key] && original[key].placeholder) || "",
-    );
+    el.setAttribute("placeholder", getTranslatedValue(key, "placeholder", lang));
   });
 
-  // Alt attributes
+  // Apply alt attribute translations
   translatableAltEls.forEach((el) => {
     const key = el.getAttribute("data-translate-alt");
-    const translated =
-      (translations && translations[lang] && translations[lang][key]) || null;
-    el.setAttribute(
-      "alt",
-      lang === "en"
-        ? (original[key] && original[key].alt) || ""
-        : translated || (original[key] && original[key].alt) || "",
-    );
+    el.setAttribute("alt", getTranslatedValue(key, "alt", lang));
   });
 
-  // Aria-label
+  // Apply aria-label translations
   translatableAriaEls.forEach((el) => {
     const key = el.getAttribute("data-translate-aria");
-    const translated =
-      (translations && translations[lang] && translations[lang][key]) || null;
-    el.setAttribute(
-      "aria-label",
-      lang === "en"
-        ? (original[key] && original[key].aria) || ""
-        : translated || (original[key] && original[key].aria) || "",
-    );
+    el.setAttribute("aria-label", getTranslatedValue(key, "aria", lang));
   });
 
-  // Update button
-  langButtonUpdate(lang);
+  // Update language button display
+  updateLangButton(lang);
 
+  // Persist language preference
   localStorage.setItem("language", lang);
   currentLang = lang;
 }
 
-function langButtonUpdate(lang) {
+/**
+ * Updates the language switch button text
+ */
+function updateLangButton(lang) {
   if (!langButton) return;
   langButton.textContent = lang === "en" ? "PT" : "EN";
 }
 
-// Fetch translations and initialize
+// ===================================
+// TRANSLATION FILE LOADING
+// ===================================
+
+/**
+ * Fetches translation data from lang.json
+ * @returns {Promise} resolves when translations are loaded
+ */
 function initTranslations() {
   if (langButton) langButton.disabled = true;
 
   return fetch(LANG_JSON_PATH)
     .then((resp) => {
-      if (!resp.ok) throw new Error("Failed to load translations");
+      if (!resp.ok) throw new Error(`Failed to load translations: ${resp.status}`);
       return resp.json();
     })
     .then((data) => {
       translations = data;
     })
     .catch((err) => {
-      console.warn("Translations could not be loaded:", err);
+      console.warn("Translations could not be loaded. Using defaults:", err.message);
       translations = null;
     })
     .finally(() => {
@@ -130,18 +144,29 @@ function initTranslations() {
     });
 }
 
-// Initialize everything on DOMContentLoaded
+// ===================================
+// INITIALIZATION
+// ===================================
+
+/**
+ * Initializes translation system on DOM ready
+ * Captures originals, loads translations, and applies current language
+ */
 document.addEventListener("DOMContentLoaded", async () => {
+  // Step 1: Capture original content for fallback
   captureOriginals();
 
+  // Step 2: Fetch and load translations
   await initTranslations();
 
+  // Step 3: Apply current language
   applyLanguage(currentLang);
 
+  // Step 4: Set up language button listener
   if (langButton) {
     langButton.addEventListener("click", () => {
-      const next = currentLang === "en" ? "pt" : "en";
-      applyLanguage(next);
+      const nextLang = currentLang === "en" ? "pt" : "en";
+      applyLanguage(nextLang);
     });
   }
 });
