@@ -1,14 +1,22 @@
-/* VARIABLES */
+/* ===================================
+   COLOR VARIABLES & THEMING
+   =================================== */
 :root {
+  /* Primary Color Palette */
   --base-color: 35, 25, 70;
   --base-variant: 15, 10, 40;
+
+  /* Text Colors */
   --text-color: 235, 235, 255;
   --text-variant: 205, 200, 235;
+
+  /* Accent Colors */
   --accent-color: 60, 170, 190;
   --accent-variant: 200, 70, 205;
 }
 
 .lightmode {
+  /* Light Mode Color Overrides */
   --base-variant: 225, 225, 245;
   --base-color: 245, 245, 255;
   --text-color: 35, 25, 70;
@@ -17,7 +25,9 @@
   --accent-variant: 60, 170, 190;
 }
 
-/* HAMBURGER MENU */
+/* ===================================
+   HAMBURGER MENU
+   =================================== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -55,19 +65,10 @@
   transform: rotate(-45deg) translate(6px, -5.5px);
 }
 
-/* THEME AND LANGUAGE SWITCHES */
-#theme-switch {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 28px;
-  width: 28px;
-  border-radius: 20%;
-  border-color: rgb(var(--text-color));
-  background-color: rgb(var(--base-variant));
-  transition-duration: 0.2s;
-}
-
+/* ===================================
+   THEME & LANGUAGE SWITCHES
+   =================================== */
+#theme-switch,
 #lang-switch {
   display: inline-flex;
   align-items: center;
@@ -78,22 +79,23 @@
   border-color: rgb(var(--text-color));
   background-color: rgb(var(--base-variant));
   transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+#lang-switch {
   color: rgb(var(--text-color));
   font-size: 0.8em;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
 }
 
-#theme-switch:hover {
+#theme-switch:hover,
+#lang-switch:hover {
   border-color: rgb(var(--accent-color));
-  cursor: pointer;
   transform: scale(1.02);
 }
 
 #lang-switch:hover {
-  border-color: rgb(var(--accent-color));
-  cursor: pointer;
-  transform: scale(1.02);
   color: rgb(var(--accent-color));
 }
 
@@ -104,7 +106,6 @@
 
 #theme-switch svg:hover {
   fill: rgb(var(--accent-color));
-  transform: scale(1.02);
 }
 
 #theme-switch svg:last-child,
@@ -114,15 +115,11 @@
 
 .lightmode #theme-switch svg:last-child {
   display: block;
-  fill: rgb(var(--text-color));
 }
 
-.lightmode #theme-switch svg:last-child:hover {
-  fill: rgb(var(--accent-color));
-  transform: scale(1.02);
-}
-
-/* STYLE NAVBAR */
+/* ===================================
+   NAVIGATION BAR
+   =================================== */
 .nav-bar {
   position: fixed;
   top: 0;
@@ -145,6 +142,7 @@
 
 .nav-list {
   list-style-type: none;
+  display: flex;
 }
 
 .nav-list li {
@@ -160,8 +158,10 @@
   transition-duration: 0.4s;
 }
 
-.nav-list a:hover {
+.nav-list a:hover,
+.nav-list a:focus-visible {
   color: rgb(var(--accent-color));
+  outline: none;
 }
 
 .nav-list a::after {
@@ -175,7 +175,8 @@
   transition: width 0.4s ease;
 }
 
-.nav-list a:hover::after {
+.nav-list a:hover::after,
+.nav-list a:focus-visible::after {
   width: 100%;
 }
 
@@ -200,7 +201,9 @@
   transition: width 0.1s linear;
 }
 
-/* STYLE SECTIONINGS */
+/* ===================================
+   GLOBAL STYLES & LAYOUT
+   =================================== */
 * {
   margin: 0;
   padding: 0;
@@ -227,6 +230,18 @@ body::before {
 body {
   background-color: rgb(var(--base-variant));
   font-family: "Montserrat", sans-serif;
+  color: rgb(var(--text-color));
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .hero-section {
@@ -415,7 +430,11 @@ h3 {
   border-radius: 8px 8px 0 0;
 }
 
-/* STYLE BUTTONS */
+/* ===================================
+   BUTTONS & INTERACTIVE ELEMENTS
+   =================================== */
+
+/* Hero Button */
 .hero-text button {
   font-family: "Montserrat", sans-serif;
   padding: 0.6em 1em;
@@ -426,16 +445,19 @@ h3 {
   font-weight: 500;
   font-size: clamp(1.4em, 1.8vw, 1.8em);
   transition-duration: 0.4s;
+  cursor: pointer;
 }
 
-.hero-text button:hover {
+.hero-text button:hover,
+.hero-text button:focus-visible {
   border-color: rgb(var(--accent-color));
   color: rgb(var(--accent-color));
-  cursor: pointer;
   transform: scale(1.02);
   box-shadow: 0 0 6px rgb(var(--accent-color));
+  outline: none;
 }
 
+/* Project Buttons */
 .project-links {
   display: flex;
   gap: 0.8em;
@@ -446,48 +468,62 @@ h3 {
   padding: 0.6em 1em;
   border-radius: 6px;
   background-color: rgb(var(--base-variant));
-  border-color: rgb(var(--text-color));
+  border: 2px solid;
   color: rgb(var(--text-color));
   font-weight: 500;
   transition-duration: 0.4s;
+  cursor: pointer;
 }
 
-.live-demo:hover {
+.live-demo {
+  border-color: rgb(var(--text-color));
+}
+
+.live-demo:hover,
+.live-demo:focus-visible {
   border-color: rgb(var(--accent-color));
   color: rgb(var(--accent-color));
-  cursor: pointer;
   transform: scale(1.02);
   box-shadow: 0 0 6px rgb(var(--accent-color));
+  outline: none;
 }
 
-.view-code:hover {
+.view-code {
+  border-color: rgb(var(--text-color));
+}
+
+.view-code:hover,
+.view-code:focus-visible {
   border-color: rgb(var(--accent-variant));
   color: rgb(var(--accent-variant));
-  cursor: pointer;
   transform: scale(1.02);
   box-shadow: 0 0 6px rgb(var(--accent-variant));
+  outline: none;
 }
 
+/* Contact Form Button */
 .contact-form button {
   font-family: "Montserrat", sans-serif;
   padding: 0.6em 1em;
   border-radius: 6px;
   background-color: rgb(var(--base-variant));
-  border-color: rgb(var(--text-color));
+  border: 2px solid rgb(var(--text-color));
   color: rgb(var(--text-color));
-  font-size: clamp(1em, 1vw, 1.2em);
+  font-size: clamp(1em, 1.4vw, 1.2em);
   font-weight: 500;
   transition-duration: 0.4s;
-  margin: 0 38% 3em 38%;
+  display: block;
+  margin: 0 auto 2.5em;
+  cursor: pointer;
 }
 
-.contact-form button:hover {
+.contact-form button:hover,
+.contact-form button:focus-visible {
   transform: scale(1.02);
   border-color: rgb(var(--accent-color));
   color: rgb(var(--accent-color));
-  cursor: pointer;
-  transition-duration: 0.4s ease;
   box-shadow: 0 0 6px rgb(var(--accent-color));
+  outline: none;
 }
 
 /* STYLE FOOTER */
@@ -513,6 +549,9 @@ h3 {
   margin-top: 2em;
 }
 
+/* ===================================
+   FORM INPUTS & TEXTAREA
+   =================================== */
 .contact-form input,
 .contact-form textarea {
   padding: 0.8em;
@@ -524,10 +563,20 @@ h3 {
   color: rgb(var(--text-variant));
   max-width: 600px;
   width: clamp(20em, 38vw, 40em);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 2px solid rgb(var(--accent-color));
+  outline-offset: 2px;
 }
 
 .contact-form textarea {
   height: 100px;
+  resize: vertical;
 }
 
 input::placeholder,
@@ -550,11 +599,18 @@ textarea::placeholder {
 
 .contact-icons a {
   text-decoration: none;
-  outline: none;
+  display: inline-block;
+  transition: 0.4s;
+  border-radius: 4px;
 }
 
 .contact-icons a:visited {
   color: inherit;
+}
+
+.contact-icons a:focus-visible {
+  outline: 2px solid rgb(var(--accent-color));
+  outline-offset: 2px;
 }
 
 .contact-icons a svg {
@@ -565,9 +621,9 @@ textarea::placeholder {
   margin-right: 1em;
 }
 
-.contact-icons a svg:hover {
+.contact-icons a:hover svg,
+.contact-icons a:focus-visible svg {
   color: rgb(var(--accent-color));
-  transition-duration: 0.4s;
   transform: scale(1.1);
 }
 
@@ -582,8 +638,11 @@ textarea::placeholder {
   font-weight: 500;
 }
 
-/* MEDIA QUERIES */
+/* ===================================
+   MEDIA QUERIES
+   =================================== */
 
+/* Large Screens: 1280px and down */
 @media screen and (max-width: 1280px) {
   .hero-section {
     padding: 12em 8em 2em 4em;
@@ -612,7 +671,7 @@ textarea::placeholder {
     padding: 4em 6em 1em 6em;
   }
 }
-
+/* Medium Screens: 1024px and down */
 @media screen and (max-width: 1024px) {
   .nav-bar {
     padding: 1.4em 5.4em;
@@ -649,25 +708,21 @@ textarea::placeholder {
   .contact-icons a svg {
     width: clamp(1.8em, 2.6vw, 2.8em);
     height: auto;
-    color: rgb(var(--text-color));
-    transition-duration: 0.4s;
     margin-right: 0.5em;
   }
 }
 
+/* Tablet: 768px and down */
 @media screen and (max-width: 768px) {
+  /* Navigation */
   .nav-bar {
     padding: 1.4em 2em;
     flex-direction: row;
     align-items: center;
     height: auto;
     width: 100%;
-    border-bottom: 2px solid rgb(var(--base-color));
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1001;
   }
+
   .nav-links {
     position: fixed;
     top: 79px;
@@ -684,15 +739,17 @@ textarea::placeholder {
     transition: transform 0.3s ease-in-out;
     z-index: 999;
   }
+
   .nav-links.active {
     transform: translateX(0);
   }
+
   .nav-list {
     width: 100%;
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .nav-list li {
     display: block;
     margin-right: 0;
@@ -700,60 +757,75 @@ textarea::placeholder {
     font-weight: 500;
     font-size: 1.4em;
   }
-  .nav-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    order: 2;
-  }
+
   .hamburger {
     display: flex;
   }
+
+  /* Hero Section */
   .hero-section {
     padding: 8em 3em 6em 3em;
   }
+
+  /* About Section */
   .about-section {
     padding: 7em 2em 2em 2em;
     text-align: center;
   }
+
+  /* Skills Section */
   .skills-section {
     padding: 7em 2em 2em 2em;
     text-align: center;
   }
+
   .skills-list {
     justify-content: center;
     gap: 0.8em;
   }
+
+  /* Projects Section */
   .projects-section {
     padding: 7em 2em 4em 2em;
   }
+
   .projects-section h2 {
     text-align: center;
   }
+
   .project-card {
     padding: 1em;
   }
+
+  /* Contact Section - Make form responsive */
   .contact-section {
     padding: 3em 2em 3em 2em;
     text-align: center;
   }
+
   .contact-container {
-    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 0;
   }
+
+  .contact-form {
+    width: 100%;
+    max-width: none;
+  }
+
   .contact-form input,
   .contact-form textarea {
     padding: 0.8em;
     border: none;
-    width: 432px;
+    width: 100%;
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
-  .contact-form button {
-    margin: 0 36% 2.5em 36%;
-  }
+
   .contact-links {
     display: flex;
     flex-direction: column;
@@ -761,6 +833,7 @@ textarea::placeholder {
     gap: 1.5em;
     margin-top: 0;
   }
+
   .copy {
     padding: 1.2em;
     font-size: 1em;
@@ -772,18 +845,22 @@ textarea::placeholder {
     top: 74px;
   }
   .hero-section {
-    padding: 9em 1em 7em 1em;
+    padding: 8em 1em 7em 1em;
   }
   .hero-title {
     font-size: clamp(2.2em, 10vw, 4.5em);
-    margin-bottom: 0.3em;
+    margin-bottom: 0.2em;
   }
   .hero-subtitle {
     font-size: clamp(1.4em, 6vw, 2.6em);
     margin-bottom: 1.2em;
   }
+  .hero-image {
+    min-width: 160px;
+    max-width: 220px;
+  }
   .hero-text button {
-    font-size: clamp(1.2em, 1.8vw, 1.8em);
+    font-size: clamp(1.3em, 5vw, 1.8em);
   }
   .section-title {
     font-size: clamp(1.7em, 6vw, 2.8em);
@@ -791,8 +868,11 @@ textarea::placeholder {
   .about-section {
     padding: 7em 1em 2em 1em;
   }
+  .about-text p:first-child {
+    margin: 1.5em 0 1.2em 0;
+  }
   .about-text {
-    font-size: clamp(1.3em, 6vw, 2.6em);
+    font-size: clamp(1.3em, 5.8vw, 1.8em);
   }
   .skills-section {
     padding: 7em 1em 2em 1em;
@@ -800,21 +880,23 @@ textarea::placeholder {
   .projects-section {
     padding: 7em 1em 4em 1em;
   }
+  .project-cards {
+    margin-top: 2.8em;
+  }
   .contact-section {
     padding: 3em 1em 3em 1em;
   }
   .contact-form input,
   .contact-form textarea {
-    width: 380px;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+  .contact-form form {
+    margin-top: 2.8em;
   }
 }
 
-@media screen and (max-width: 412px) {
-  .contact-form input,
-  .contact-form textarea {
-    width: 280px;
-  }
-  .contact-form button {
-    margin: 0 32% 2.5em 32%;
-  }
-}
+/* ===================================
+   END OF STYLESHEET
+   =================================== */
