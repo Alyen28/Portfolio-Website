@@ -246,7 +246,7 @@ body {
 }
 
 .hero-section {
-  padding: 11em 14em 6em 10em;
+  padding: 12em 14em 4em 10em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -254,15 +254,15 @@ body {
 }
 
 .about-section {
-  padding: 8em 10em;
+  padding: 8em 10em 0 10em;
 }
 
 .skills-section {
-  padding: 8em 10em;
+  padding: 8em 10em 0 10em;
 }
 
 .projects-section {
-  padding: 8em 10em;
+  padding: 8em 10em 6em 10em;
 }
 
 /* STYLE TEXT */
@@ -273,7 +273,6 @@ h3 {
 }
 
 .hero-title {
-  margin-top: 0.5em;
   font-size: clamp(3em, 4.5vw, 4.5em);
   margin-bottom: 0.1em;
   background: linear-gradient(
@@ -286,7 +285,7 @@ h3 {
 
 .hero-subtitle {
   color: rgb(var(--text-variant));
-  font-size: clamp(1.8em, 2.5vw, 2.6em);
+  font-size: clamp(1.8em, 2.6vw, 2.6em);
   margin-bottom: 0.8em;
 }
 
@@ -646,7 +645,7 @@ textarea::placeholder {
 /* Large Screens: 1280px and down */
 @media screen and (max-width: 1280px) {
   .hero-section {
-    padding: 12em 8em 2em 4em;
+    padding: 12em 8em 4em 4em;
     gap: 1em;
   }
   .hero-title {
@@ -660,13 +659,13 @@ textarea::placeholder {
     min-width: 350px;
   }
   .about-section {
-    padding: 12em 6em 2em 6em;
+    padding: 8em 6em 0em 6em;
   }
   .skills-section {
-    padding: 8em 6em 2em 6em;
+    padding: 8em 6em 0em 6em;
   }
   .projects-section {
-    padding: 8em 6em 5em 6em;
+    padding: 8em 6em 4em 6em;
   }
   .contact-section {
     padding: 4em 6em 1em 6em;
@@ -781,12 +780,12 @@ textarea::placeholder {
 
   /* Hero Section */
   .hero-section {
-    padding: 8em 4em 1em 4em;
+    padding: 9em 4em 0 4em;
   }
 
   /* About Section */
   .about-section {
-    padding: 6em 2em 0 2em;
+    padding: 7em 2em 0 2em;
     text-align: center;
   }
 
@@ -864,7 +863,7 @@ textarea::placeholder {
 
 @media screen and (max-width: 512px) {
   .hero-section {
-    padding: 8em 1.5em 1em 1.5em;
+    padding: 9em 1.5em 0 1.5em;
   }
   .hero-title {
     font-size: clamp(2.2em, 10vw, 4.5em);
@@ -885,13 +884,13 @@ textarea::placeholder {
     font-size: clamp(1.7em, 6vw, 2.8em);
   }
   .about-section {
-    padding: 6em 1.5em 0 1.5em;
+    padding: 7em 1.5em 0 1.5em;
   }
   .about-text p:first-child {
     margin: 1.5em 0 1.2em 0;
   }
   .about-text {
-    font-size: clamp(1.3em, 5.8vw, 1.8em);
+    font-size: clamp(1.3em, 5.2vw, 1.8em);
   }
   .skills-section {
     padding: 6em 1.5em 0 1.5em;
