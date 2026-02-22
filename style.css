@@ -246,7 +246,7 @@ body {
 }
 
 .hero-section {
-  padding: 12em 14em 4em 10em;
+  padding: 12em 14em 3em 10em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -645,7 +645,7 @@ textarea::placeholder {
 /* Large Screens: 1280px and down */
 @media screen and (max-width: 1280px) {
   .hero-section {
-    padding: 12em 8em 4em 4em;
+    padding: 12em 8em 3em 4em;
     gap: 1em;
   }
   .hero-title {
@@ -677,12 +677,12 @@ textarea::placeholder {
     padding: 1.4em 5.4em;
   }
   .hero-section {
-    padding: 9em 10em 0 10em;
+    padding: 10em 10em 2em 10em;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    gap: 0em;
+    gap: 2em;
   }
   .hero-title {
     margin-bottom: 0.2em;
@@ -696,7 +696,7 @@ textarea::placeholder {
     max-width: 250px;
   }
   .about-section {
-    padding: 7em 6em 0 6em;
+    padding: 6em 6em 0 6em;
   }
   .skills-section {
     padding: 6em 6em 0 6em;
@@ -780,7 +780,7 @@ textarea::placeholder {
 
   /* Hero Section */
   .hero-section {
-    padding: 9em 4em 0 4em;
+    padding: 9em 4em 1em 4em;
   }
 
   /* About Section */
@@ -863,7 +863,7 @@ textarea::placeholder {
 
 @media screen and (max-width: 512px) {
   .hero-section {
-    padding: 9em 1.5em 0 1.5em;
+    padding: 9em 1.5em 1em 1.5em;
   }
   .hero-title {
     font-size: clamp(2.2em, 10vw, 4.5em);
