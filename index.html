@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A portfolio website divided in 5 main sections: Home, About, Skills, Projects and Contact."
+      content="Alyne Feitosa's web development portfolio, featuring projects, skills, and contact information."
     />
+    <meta name="theme-color" content="#0d0a14" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,16 +15,15 @@
       href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link href="style.css" rel="stylesheet" />
+    <script src="lang.js" defer></script>
+    <script src="script.js" defer></script>
 
-    <title>Portfolio Website</title>
+    <title>Alyne Feitosa | Front-end Developer</title>
   </head>
   <body>
     <nav class="nav-bar">
@@ -46,7 +46,7 @@
           </li>
         </ul>
       </div>
-      <button id="hamburger" class="hamburger" aria-label="menu">
+      <button id="hamburger" class="hamburger" aria-label="menu" type="button">
         <span></span>
         <span></span>
         <span></span>
@@ -57,6 +57,7 @@
           id="theme-switch"
           aria-label="theme switch"
           data-translate-aria="ariaThemeSwitch"
+          type="button"
         >
           <svg viewBox="0 -960 960 960" fill="currentColor">
             <path
@@ -73,6 +74,7 @@
           id="lang-switch"
           aria-label="language switch"
           data-translate-aria="ariaLangSwitch"
+          type="button"
         ></button>
       </div>
 
@@ -85,8 +87,12 @@
           <div class="hero-image">
             <img
               src="assets/new-logo.webp"
-              loading="lazy"
-              alt="cyan alien's head with a pink symbol on the bottom"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              width="1960"
+              height="1960"
+              alt="Alyne Feitosa personal logo"
               data-translate-alt="altLogoHero"
             />
           </div>
@@ -147,7 +153,8 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 128 128"
-                  alt="HTML5 logo"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     fill="currentColor"
@@ -161,7 +168,8 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 128 128"
-                  alt="CSS3 logo"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     fill="currentColor"
@@ -175,7 +183,8 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 128 128"
-                  alt="JavaScript Logo"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     fill="currentColor"
@@ -189,7 +198,8 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 128 128"
-                  alt="Python logo"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     fill="currentColor"
@@ -203,7 +213,8 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 128 128"
-                  alt="PyCharm Logo"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     fill="currentColor"
@@ -217,7 +228,8 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 128 128"
-                  alt="VSCode Logo"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     fill="currentColor"
@@ -233,7 +245,8 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 128 128"
-                  alt="Git Logo"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     fill="currentColor"
@@ -247,7 +260,8 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 128 128"
-                  alt="GitHub Logo"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <g fill="currentColor">
                     <path
@@ -267,7 +281,8 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 128 128"
-                  alt="Figma Logo"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     fill="currentColor"
@@ -320,6 +335,9 @@
               <img
                 src="assets/street-paws.webp"
                 loading="lazy"
+                decoding="async"
+                width="1280"
+                height="640"
                 alt="a header of a website about animal welfare, with the title 'Street Paws'"
                 data-translate-alt="altStreetPaws"
               />
@@ -334,16 +352,20 @@
                     aria-label="live demo of Street Paws"
                     data-translate="liveDemo"
                     data-translate-aria="ariaStreetPawsDemo"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Live Demo
                   </button></a
                 >
-                <a href="https://github.com/Alyen28/Street-Paws.git"
+                <a href="https://github.com/Alyen28/Street-Paws"
                   ><button
                     class="view-code"
                     aria-label="view Street Paws' code"
                     data-translate="projectsCode"
                     data-translate-aria="ariaStreetPawsCode"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     View Code
                   </button></a
@@ -355,6 +377,9 @@
               <img
                 src="assets/the-recipe-journal.webp"
                 loading="lazy"
+                decoding="async"
+                width="1280"
+                height="640"
                 alt="a header of a recipes website, with the title 'The Recipe Journal'"
                 data-translate-alt="altRecipeJournal"
               />
@@ -369,16 +394,20 @@
                     aria-label="live demo of The Recipe Journal"
                     data-translate="liveDemo"
                     data-translate-aria="ariaRecipeJournalDemo"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Live Demo
                   </button></a
                 >
-                <a href="https://github.com/Alyen28/The-Recipe-Journal.git"
+                <a href="https://github.com/Alyen28/The-Recipe-Journal"
                   ><button
                     class="view-code"
                     aria-label="view The Recipe Journal's code"
                     data-translate="projectsCode"
                     data-translate-aria="ariaRecipeJournalCode"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     View Code
                   </button></a
@@ -393,7 +422,7 @@
     <footer id="contact-section">
       <div class="contact-section">
         <div class="section-title" data-aos="fade-up" data-aos-delay="100">
-          <h2 data-translate="contactTitle">Contact Me</h2>
+          <h2 data-translate="contactTitle" id="contact-title">Contact Me</h2>
         </div>
 
         <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
@@ -401,19 +430,34 @@
             <form
               action="https://formsubmit.co/alyen28.dev@gmail.com"
               method="POST"
+              aria-labelledby="contact-title"
             >
+              <label for="name" class="sr-only">Name</label>
               <input
+                id="name"
                 type="text"
                 name="name"
                 placeholder="Name"
                 required
+                autocomplete="name"
                 data-translate-placeholder="inputName"
               />
-              <input type="email" name="email" placeholder="Email" required />
+              <label for="email" class="sr-only">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                autocomplete="email"
+              />
+              <label for="message" class="sr-only">Message</label>
               <textarea
+                id="message"
                 name="message"
                 placeholder="Message"
                 required
+                autocomplete="off"
                 data-translate-placeholder="inputMessage"
               ></textarea>
               <button type="submit" data-translate="submitButton">
@@ -422,7 +466,7 @@
             </form>
           </div>
 
-          <div class="contact-links">
+          <address class="contact-links">
             <div class="contact-text">
               <p data-translate="contactText">
                 I am open to new challenges, projects and partnerships. Let's
@@ -435,6 +479,9 @@
                 target="_blank"
                 aria-label="link to my GitHub contact"
                 data-translate-aria="ariaGitHubLink"
+                rel="noopener noreferrer"
+                aria-hidden="true"
+                focusable="false"
               >
                 <svg viewBox="0 0 24 24">
                   <path
@@ -448,6 +495,9 @@
                 target="_blank"
                 aria-label="link to my LinkedIn contact"
                 data-translate-aria="ariaLinkedInLink"
+                rel="noopener noreferrer"
+                aria-hidden="true"
+                focusable="false"
               >
                 <svg viewBox="0 0 24 24">
                   <path
@@ -461,6 +511,9 @@
                 target="_blank"
                 aria-label="link to my Discord contact"
                 data-translate-aria="ariaDiscordLink"
+                rel="noopener noreferrer"
+                aria-hidden="true"
+                focusable="false"
               >
                 <svg viewBox="0 0 24 24">
                   <path
@@ -474,6 +527,9 @@
                 target="_blank"
                 aria-label="link to my Telegram contact"
                 data-translate-aria="ariaTelegramLink"
+                rel="noopener noreferrer"
+                aria-hidden="true"
+                focusable="false"
               >
                 <svg viewBox="0 0 24 24">
                   <path
@@ -483,11 +539,11 @@
                 </svg>
               </a>
             </div>
-          </div>
+          </address>
         </div>
       </div>
       <div class="copy">
-        <p>&copy; 2026 | Alyne Feitosa</p>
+        <p></p>
       </div>
     </footer>
 
@@ -498,7 +554,5 @@
         once: true,
       });
     </script>
-    <script src="lang.js"></script>
-    <script src="script.js"></script>
   </body>
 </html>
