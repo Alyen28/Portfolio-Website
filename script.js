@@ -1,27 +1,18 @@
-/**
- * Portfolio Website - Main JavaScript Module
- * Handles theme switching, scroll progress bar, and mobile menu
- */
-
 // ===================================
 // THEME SWITCHING FUNCTIONALITY
 // ===================================
 
-/** Track current light mode state from localStorage */
+// Track current light mode state from localStorage
 let lightmode = localStorage.getItem("lightmode");
 const themeSwitch = document.getElementById("theme-switch");
 
-/**
- * Enable light mode by adding class and updating localStorage
- */
+// Enable light mode by adding class and updating localStorage
 const enableLightmode = () => {
   document.body.classList.add("lightmode");
   localStorage.setItem("lightmode", "active");
 };
 
-/**
- * Disable light mode by removing class and clearing localStorage
- */
+// Disable light mode by removing class and clearing localStorage
 const disableLightmode = () => {
   document.body.classList.remove("lightmode");
   localStorage.setItem("lightmode", null);
@@ -48,15 +39,13 @@ if (themeSwitch) {
 // SCROLL PROGRESS BAR
 // ===================================
 
-/**
- * Update scroll progress bar width based on scroll position
- */
+// Update scroll progress bar width based on scroll position
 window.addEventListener("scroll", () => {
   const scrollPercentage =
     (window.scrollY /
       (document.documentElement.scrollHeight - window.innerHeight)) *
     100;
-  
+
   const progressBar = document.querySelector(".scroll-progress");
   if (progressBar) {
     progressBar.style.width = scrollPercentage + "%";
@@ -85,3 +74,10 @@ document.querySelectorAll(".nav-list a").forEach((link) => {
     navLinks?.classList.remove("active");
   });
 });
+
+// ===================================
+// AUTOMATIC COPY
+// ===================================
+
+document.querySelector(".copy p").textContent =
+  `© ${new Date().getFullYear()} | Alyne Feitosa`;

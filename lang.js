@@ -1,14 +1,11 @@
-/**
- * Portfolio Website - Language & Translation Module
- * Manages multi-language support (English/Portuguese)
- */
-
 const LANG_JSON_PATH = "lang.json";
 
 // DOM elements for translation
 const langButton = document.getElementById("lang-switch");
 const translatableTextEls = document.querySelectorAll("[data-translate]");
-const translatablePlaceholderEls = document.querySelectorAll("[data-translate-placeholder]");
+const translatablePlaceholderEls = document.querySelectorAll(
+  "[data-translate-placeholder]",
+);
 const translatableAltEls = document.querySelectorAll("[data-translate-alt]");
 const translatableAriaEls = document.querySelectorAll("[data-translate-aria]");
 
@@ -21,10 +18,7 @@ const original = {};
 // TRANSLATION DATA CAPTURE & STORAGE
 // ===================================
 
-/**
- * Captures original text content and attributes for fallback
- * when translations are not available
- */
+// Captures original text content and attributes for fallback when translations are not available
 function captureOriginals() {
   // Capture text content
   translatableTextEls.forEach((el) => {
@@ -59,22 +53,17 @@ function captureOriginals() {
 // TRANSLATION APPLICATION
 // ===================================
 
-/**
- * Helper function to get translated value or fallback to original
- */
+// Helper function to get translated value or fallback to original
 function getTranslatedValue(key, prop, lang) {
   if (lang === "en") {
     return original[key]?.[prop] || "";
   }
-  
+
   const translated = translations?.[lang]?.[key];
   return translated || original[key]?.[prop] || "";
 }
 
-/**
- * Applies language translation to all elements in the page
- * Supports text, placeholders, alt attributes, and ARIA labels
- */
+// Applies language translation to all elements in the page
 function applyLanguage(lang) {
   // Apply text content translations
   translatableTextEls.forEach((el) => {
@@ -85,7 +74,10 @@ function applyLanguage(lang) {
   // Apply placeholder translations
   translatablePlaceholderEls.forEach((el) => {
     const key = el.getAttribute("data-translate-placeholder");
-    el.setAttribute("placeholder", getTranslatedValue(key, "placeholder", lang));
+    el.setAttribute(
+      "placeholder",
+      getTranslatedValue(key, "placeholder", lang),
+    );
   });
 
   // Apply alt attribute translations
@@ -108,9 +100,7 @@ function applyLanguage(lang) {
   currentLang = lang;
 }
 
-/**
- * Updates the language switch button text
- */
+// Updates the language switch button text
 function updateLangButton(lang) {
   if (!langButton) return;
   langButton.textContent = lang === "en" ? "PT" : "EN";
@@ -120,23 +110,25 @@ function updateLangButton(lang) {
 // TRANSLATION FILE LOADING
 // ===================================
 
-/**
- * Fetches translation data from lang.json
- * @returns {Promise} resolves when translations are loaded
- */
+// Fetches translation data from lang.json
+// @returns {Promise} resolves when translations are loaded
 function initTranslations() {
   if (langButton) langButton.disabled = true;
 
   return fetch(LANG_JSON_PATH)
     .then((resp) => {
-      if (!resp.ok) throw new Error(`Failed to load translations: ${resp.status}`);
+      if (!resp.ok)
+        throw new Error(`Failed to load translations: ${resp.status}`);
       return resp.json();
     })
     .then((data) => {
       translations = data;
     })
     .catch((err) => {
-      console.warn("Translations could not be loaded. Using defaults:", err.message);
+      console.warn(
+        "Translations could not be loaded. Using defaults:",
+        err.message,
+      );
       translations = null;
     })
     .finally(() => {
@@ -148,21 +140,16 @@ function initTranslations() {
 // INITIALIZATION
 // ===================================
 
-/**
- * Initializes translation system on DOM ready
- * Captures originals, loads translations, and applies current language
- */
+// Initializes translation system on DOM ready
+// Captures originals, loads translations, and applies current language
 document.addEventListener("DOMContentLoaded", async () => {
-  // Step 1: Capture original content for fallback
+  // Capture original content for fallback
   captureOriginals();
-
-  // Step 2: Fetch and load translations
+  // Fetch and load translations
   await initTranslations();
-
-  // Step 3: Apply current language
+  // Apply current language
   applyLanguage(currentLang);
-
-  // Step 4: Set up language button listener
+  // Set up language button listener
   if (langButton) {
     langButton.addEventListener("click", () => {
       const nextLang = currentLang === "en" ? "pt" : "en";
