@@ -440,25 +440,26 @@ h3 {
    =================================== */
 
 /* Hero Button */
-.hero-text button {
+.hero-button {
   font-family: "Montserrat", sans-serif;
   padding: 0.6em 1em;
+  text-decoration: none;
+  border: 2px solid rgb(var(--text-variant));
   border-radius: 6px;
-  background-color: rgb(var(--base-variant));
-  border-color: rgb(var(--text-variant));
   color: rgb(var(--text-variant));
   font-weight: 500;
-  font-size: clamp(1.4em, 1.8vw, 1.8em);
+  font-size: clamp(1.3em, 1.8vw, 1.8em);
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
-.hero-text button:hover,
-.hero-text button:focus-visible {
+.hero-button:hover,
+.hero-button:focus-visible {
   border-color: rgb(var(--accent-color));
   color: rgb(var(--accent-color));
   transform: scale(1.02);
   box-shadow: 0 0 6px rgb(var(--accent-color));
+  font-size: clamp(1.3em, 1.82vw, 1.8em);
   outline: none;
 }
 
@@ -468,20 +469,16 @@ h3 {
   gap: 0.8em;
 }
 
-.project-links button {
+.live-demo {
   font-family: "Montserrat", sans-serif;
+  text-decoration: none;
   padding: 0.6em 1em;
   border-radius: 6px;
-  background-color: rgb(var(--base-variant));
-  border-color: rgb(var(--text-variant));
+  border: 1px solid rgb(var(--text-variant));
   color: rgb(var(--text-color));
   font-weight: 500;
   transition-duration: 0.4s;
   cursor: pointer;
-}
-
-.live-demo {
-  border-color: rgb(var(--text-color));
 }
 
 .live-demo:hover,
@@ -494,7 +491,15 @@ h3 {
 }
 
 .view-code {
-  border-color: rgb(var(--text-color));
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  padding: 0.6em 1em;
+  border-radius: 6px;
+  border: 1px solid rgb(var(--text-variant));
+  color: rgb(var(--text-color));
+  font-weight: 500;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .view-code:hover,
@@ -512,7 +517,7 @@ h3 {
   padding: 0.6em 1em;
   border-radius: 6px;
   background-color: rgb(var(--base-variant));
-  border-color: rgb(var(--text-variant));
+  border: 2px solid rgb(var(--text-variant));
   color: rgb(var(--text-color));
   font-size: clamp(1em, 1.4vw, 1.2em);
   font-weight: 500;
@@ -619,6 +624,7 @@ textarea::placeholder {
   display: inline-block;
   transition: 0.4s;
   border-radius: 4px;
+  padding: 0.4em;
 }
 
 .contact-icons a:visited {
@@ -627,7 +633,6 @@ textarea::placeholder {
 
 .contact-icons a:focus-visible {
   outline: 2px solid rgb(var(--accent-color));
-  outline-offset: 2px;
 }
 
 .contact-icons a svg {
@@ -635,7 +640,6 @@ textarea::placeholder {
   height: auto;
   color: rgb(var(--text-color));
   transition-duration: 0.4s;
-  margin-right: 1em;
 }
 
 .contact-icons a:hover svg,
@@ -738,11 +742,6 @@ textarea::placeholder {
     color: rgb(var(--text-variant));
     font-size: clamp(1.2em, 2.5vw, 2em);
   }
-  .contact-icons a svg {
-    width: clamp(1.8em, 2.6vw, 2.8em);
-    height: auto;
-    margin-right: 0.5em;
-  }
 }
 
 /* Tablet: 768px and down */
@@ -830,7 +829,6 @@ textarea::placeholder {
     padding: 1em;
   }
 
-  /* Contact Section - Make form responsive */
   .contact-section {
     padding: 3em 2em 3em 2em;
     text-align: center;

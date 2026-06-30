@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Alyne Feitosa's web development portfolio, featuring projects, skills, and contact information."
+      content="Portfolio of Alyne Feitosa, a front-end developer showcasing technical skills, projects and contact information."
     />
     <meta name="theme-color" content="#0d0a14" />
+    <meta property="og:title" content="Alyne Feitosa | Front-End Developer" />
+    <meta
+      property="og:description"
+      content="Projects, technical skills, and a growing portfolio."
+    />
+    <meta
+      property="og:image"
+      content="https://alyne-feitosa.netlify.app/assets/preview.png"
+    />
+    <meta property="og:type" content="website" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +37,7 @@
   </head>
   <body>
     <nav class="nav-bar">
-      <div class="nav-links">
+      <div class="nav-links" id="navigation">
         <ul class="nav-list">
           <li><a href="#hero-section" data-translate="navHome">Home</a></li>
           <li>
@@ -46,7 +56,15 @@
           </li>
         </ul>
       </div>
-      <button id="hamburger" class="hamburger" aria-label="menu" type="button">
+      <button
+        id="hamburger"
+        class="hamburger"
+        aria-label="navigation menu"
+        data-translate-aria="ariaHamburger"
+        aria-expanded="false"
+        aria-controls="navigation"
+        type="button"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -55,7 +73,7 @@
       <div class="nav-buttons">
         <button
           id="theme-switch"
-          aria-label="theme switch"
+          aria-label="switch theme"
           data-translate-aria="ariaThemeSwitch"
           type="button"
         >
@@ -72,7 +90,7 @@
         </button>
         <button
           id="lang-switch"
-          aria-label="language switch"
+          aria-label="switch language"
           data-translate-aria="ariaLangSwitch"
           type="button"
         ></button>
@@ -102,9 +120,13 @@
               Front-end developer focused on building clean, accessible, and
               user-centered web experiences.
             </p>
-            <a href="#projects-section"
-              ><button data-translate="heroButton">View Projects</button></a
+            <a
+              href="#projects-section"
+              class="hero-button"
+              data-translate="heroButton"
             >
+              View Projects
+            </a>
           </div>
         </div>
       </header>
@@ -346,30 +368,28 @@
                 Website to raise awareness about animal welfare
               </p>
               <div class="project-links">
-                <a href="https://alyen28.github.io/Street-Paws/"
-                  ><button
-                    class="live-demo"
-                    aria-label="live demo of Street Paws"
-                    data-translate="liveDemo"
-                    data-translate-aria="ariaStreetPawsDemo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo
-                  </button></a
+                <a
+                  href="https://street-paws.netlify.app/"
+                  class="live-demo"
+                  aria-label="live demo of Street Paws"
+                  data-translate="liveDemo"
+                  data-translate-aria="ariaStreetPawsDemo"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                <a href="https://github.com/Alyen28/Street-Paws"
-                  ><button
-                    class="view-code"
-                    aria-label="view Street Paws' code"
-                    data-translate="projectsCode"
-                    data-translate-aria="ariaStreetPawsCode"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Code
-                  </button></a
+                  Live Demo
+                </a>
+                <a
+                  href="https://github.com/alynedev/street-paws"
+                  class="view-code"
+                  aria-label="view Street Paws' code"
+                  data-translate="projectsCode"
+                  data-translate-aria="ariaStreetPawsCode"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
+                  View Code
+                </a>
               </div>
             </div>
 
@@ -388,30 +408,28 @@
                 Front-end project simulating a recipe website
               </p>
               <div class="project-links">
-                <a href="https://alyen28.github.io/The-Recipe-Journal/"
-                  ><button
-                    class="live-demo"
-                    aria-label="live demo of The Recipe Journal"
-                    data-translate="liveDemo"
-                    data-translate-aria="ariaRecipeJournalDemo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo
-                  </button></a
+                <a
+                  href="https://the-recipe-journal.netlify.app/"
+                  class="live-demo"
+                  aria-label="live demo of The Recipe Journal"
+                  data-translate="liveDemo"
+                  data-translate-aria="ariaRecipeJournalDemo"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                <a href="https://github.com/Alyen28/The-Recipe-Journal"
-                  ><button
-                    class="view-code"
-                    aria-label="view The Recipe Journal's code"
-                    data-translate="projectsCode"
-                    data-translate-aria="ariaRecipeJournalCode"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Code
-                  </button></a
+                  Live Demo
+                </a>
+                <a
+                  href="https://github.com/alynedev/the-recipe-journal"
+                  class="view-code"
+                  aria-label="view The Recipe Journal's code"
+                  data-translate="projectsCode"
+                  data-translate-aria="ariaRecipeJournalCode"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
+                  View Code
+                </a>
               </div>
             </div>
           </div>
@@ -428,7 +446,7 @@
         <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
           <div class="contact-form">
             <form
-              action="https://formsubmit.co/alyen28.dev@gmail.com"
+              action="https://formsubmit.co/karlaalyne08@gmail.com"
               method="POST"
               aria-labelledby="contact-title"
             >
@@ -475,7 +493,7 @@
             </div>
             <div class="contact-icons">
               <a
-                href="https://github.com/Alyen28"
+                href="https://github.com/alynedev"
                 target="_blank"
                 aria-label="link to my GitHub contact"
                 data-translate-aria="ariaGitHubLink"
@@ -523,7 +541,7 @@
                 </svg>
               </a>
               <a
-                href="https://t.me/alyen28"
+                href="https://t.me/alyn3e"
                 target="_blank"
                 aria-label="link to my Telegram contact"
                 data-translate-aria="ariaTelegramLink"
