@@ -60,10 +60,13 @@ const hamburger = document.getElementById("hamburger");
 const navLinks = document.querySelector(".nav-links");
 
 // Toggle menu visibility on hamburger button click
-if (hamburger) {
+if (hamburger && navLinks) {
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
-    navLinks?.classList.toggle("active");
+    navLinks.classList.toggle("active");
+
+    const isOpen = navLinks.classList.contains("active");
+    hamburger.setAttribute("aria-expanded", isOpen);
   });
 }
 
@@ -72,7 +75,18 @@ document.querySelectorAll(".nav-list a").forEach((link) => {
   link.addEventListener("click", () => {
     hamburger?.classList.remove("active");
     navLinks?.classList.remove("active");
+    hamburger?.setAttribute("aria-expanded", "false");
   });
+});
+
+// Close menu when user presses Esc
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && navLinks?.classList.contains("active")) {
+    hamburger?.classList.remove("active");
+    navLinks.classList.remove("active");
+    hamburger?.setAttribute("aria-expanded", "false");
+    hamburger?.focus();
+  }
 });
 
 // ===================================
