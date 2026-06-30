@@ -4,7 +4,7 @@ My personal portfolio website, where I showcase my projects and skills!
 
 ## 🚀 Live Demo
 
-[Check it out here!](https://alyen28.github.io/Portfolio-Website/)
+[Check it out here!](https://alyne-feitosa.netlify.app/)
 
 ## 🛠️ Built With
 
@@ -43,7 +43,7 @@ Icons and visual assets used in this project were sourced from:
 
 ## 📫 Contact
 
-- GitHub: [Alyen28](https://github.com/Alyen28)
+- GitHub: [Alyne Feitosa](https://github.com/alynedev)
 - LinkedIn: [Alyne Feitosa](https://linkedin.com/in/alyne-feitosa)
-- Telegram: [alyen28](https://t.me/alyen28)
+- Telegram: [Alyne](https://t.me/alyn3e)
 - Discord: [Alynee](758289221777358900)
